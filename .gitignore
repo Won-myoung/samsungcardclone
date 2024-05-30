@@ -1,10 +1,40 @@
-#은 주석의 역할을 한다.
-#폴더 : /폴더명 (예 : /docs)
-#파일 : 파일명.확장자 (예 : test.txt)
-#폴더 안 파일 : /폴더명/파일명.확장자 (예 : /docs/test.txt)
-#폴더 안 특정 확장자 파일 전부 (예 : /docs/*.text)
-#폴더 하위 모든 특정 확장자 파일 전부 (예 : /docs/**/*.txt)
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
+
+# .history파일도 제거해주세요 ㅠㅠ from 희진님
+.history/
+
+# Node.js dependencies
 node_modules/
-build/
+
+# Distribution files
 dist/
+dist-ssr/
+build/
+
+# Editor directories and files
+.vscode/
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Environment variables
+.env
+
+# Vite config file
+vite.config.js
+
+# Package files
+package.json
+package-lock.json
