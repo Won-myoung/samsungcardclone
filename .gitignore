@@ -5,6 +5,6 @@
 #폴더 안 특정 확장자 파일 전부 (예 : /docs/*.text)
 #폴더 하위 모든 특정 확장자 파일 전부 (예 : /docs/**/*.txt)
 
-/node_modules
-/build
-/dist
+node_modules/
+build/
+dist/
