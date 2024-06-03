@@ -1,0 +1,83 @@
+@import "colorVaration.css";
+
+.guide {
+  padding-top: calc(162px + 100px);
+  max-width: 1224px;
+  margin: 0 auto;
+}
+.guideTapButton {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.guideTapButton button {
+  border: 1px solid var(--color-lineLightGray);
+  background: none;
+  padding: 9px 16px;
+  margin: 6px 4px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+}
+.guideTapButton button.active {
+  background-color: #111;
+  color: white;
+}
+
+.guideTapItem {
+  display: flex;
+  max-width: 1224px;
+  flex-direction: column;
+}
+.guideTapItem h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+@media (max-width: 1000px) {
+  .guideTapItem {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .guideTapItemWrap {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.guideTapItem > a {
+  font-size: 14px;
+  padding: 14px 16px;
+  background-color: #f4f6fb;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.guideTapItem .guideTapItemWrap {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  justify-content: space-between;
+}
+
+.guideCardItem {
+  display: flex;
+  flex-grow: 1;
+  gap: 30px;
+  margin-top: 30px;
+  min-width: 450px;
+}
+.guideCardItem img {
+  width: 68px;
+}
+.guideCardItem .guideItemTextbox {
+  h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 14px;
+    color: #666;
+  }
+}

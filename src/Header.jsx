@@ -35,7 +35,7 @@ export default function Header() {
         <div className="topMenuWrapper">
           <div className="topMenuLogo">
             <Link to="/">
-              <img src="./samsunglogo.png" alt="" />
+              <img src="/samsunglogo.png" alt="" />
             </Link>
           </div>
           <ul className="topMenuCenter">
@@ -46,7 +46,7 @@ export default function Header() {
               <Link to="/Benefit">혜택</Link>
             </li>
             <li>
-              <Link to="/Guidance">카드안내/신청</Link>
+              <Link to="/Guide">카드안내/신청</Link>
             </li>
             <li>
               <Link to="/Finance">금융</Link>

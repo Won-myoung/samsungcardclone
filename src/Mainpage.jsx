@@ -375,7 +375,7 @@ export default function Mainpage() {
         </div>
       </div>
       <div className="mainCardWrap">
-        <div className="mainCardlist">
+        <div className="mainCardlist PCversion">
           <button
             onClick={() => handleCardButtonClick("cardTap01")}
             className={currentTabCard === "cardTap01" ? "active" : ""}
@@ -388,9 +388,11 @@ export default function Mainpage() {
           >
             법인카드
           </button>
-          <Link to="#">카드 전체보기</Link>
-          <Link to="#">내게 맞는 카드 찾기</Link>
-          <Link to="#">친구에게 카드추천</Link>
+          <div>
+            <Link to="#">카드 전체보기</Link>
+            <Link to="#">내게 맞는 카드 찾기</Link>
+            <Link to="#">친구에게 카드추천</Link>
+          </div>
         </div>
         {currentTabCard === "cardTap01" && (
           <div className="cardTap01">
@@ -423,7 +425,7 @@ export default function Mainpage() {
               <SwiperSlide>
                 <Link to="">
                   <div className="cardContainer">
-                    <img src="./cardgif/motionCard01.gif" alt="" />
+                    <img src="/cardgif/motionCard01.gif" alt="" />
                   </div>
                   <strong>모니카 카드1</strong>
                   <p>
@@ -435,7 +437,7 @@ export default function Mainpage() {
               <SwiperSlide>
                 <Link to="">
                   <div className="cardContainer">
-                    <img src="./cardgif/motionCard02.gif" alt="" />
+                    <img src="/cardgif/motionCard02.gif" alt="" />
                   </div>
                   <strong>모니카 카드</strong>
                   <p>
@@ -447,7 +449,7 @@ export default function Mainpage() {
               <SwiperSlide>
                 <Link to="">
                   <div className="cardContainer">
-                    <img src="./cardgif/motionCard03.gif" alt="" />
+                    <img src="/cardgif/motionCard03.gif" alt="" />
                   </div>
                   <strong>모니카 카드</strong>
                   <p>
@@ -459,7 +461,7 @@ export default function Mainpage() {
               <SwiperSlide>
                 <Link to="">
                   <div className="cardContainer">
-                    <img src="./cardgif/motionCard04.gif" alt="" />
+                    <img src="/cardgif/motionCard04.gif" alt="" />
                   </div>
                   <strong>모니카 카드</strong>
                   <p>
@@ -471,7 +473,7 @@ export default function Mainpage() {
               <SwiperSlide>
                 <Link to="">
                   <div className="cardContainer">
-                    <img src="./cardgif/motionCard05.gif" alt="" />
+                    <img src="/cardgif/motionCard05.gif" alt="" />
                   </div>
                   <strong>모니카 카드</strong>
                   <p>
@@ -483,7 +485,7 @@ export default function Mainpage() {
               <SwiperSlide>
                 <Link to="">
                   <div className="cardContainer">
-                    <img src="./cardgif/motionCard06.gif" alt="" />
+                    <img src="/cardgif/motionCard06.gif" alt="" />
                   </div>
                   <strong>모니카 카드</strong>
                   <p>
@@ -495,7 +497,7 @@ export default function Mainpage() {
               <SwiperSlide>
                 <Link to="">
                   <div className="cardContainer">
-                    <img src="./cardgif/motionCard07.gif" alt="" />
+                    <img src="/cardgif/motionCard07.gif" alt="" />
                   </div>
                   <strong>모니카 카드</strong>
                   <p>
@@ -507,7 +509,7 @@ export default function Mainpage() {
               <SwiperSlide>
                 <Link to="">
                   <div className="cardContainer">
-                    <img src="./cardgif/motionCard08.gif" alt="" />
+                    <img src="/cardgif/motionCard08.gif" alt="" />
                   </div>
                   <strong>모니카 카드</strong>
                   <p>
@@ -519,7 +521,7 @@ export default function Mainpage() {
               <SwiperSlide>
                 <Link to="">
                   <div className="cardContainer">
-                    <img src="./cardgif/motionCard09.gif" alt="" />
+                    <img src="/cardgif/motionCard09.gif" alt="" />
                   </div>
                   <strong>모니카 카드</strong>
                   <p>
@@ -531,7 +533,7 @@ export default function Mainpage() {
               <SwiperSlide>
                 <Link to="">
                   <div className="cardContainer">
-                    <img src="./cardgif/motionCard10.gif" alt="" />
+                    <img src="/cardgif/motionCard10.gif" alt="" />
                   </div>
                   <strong>모니카 카드</strong>
                   <p>
@@ -543,7 +545,7 @@ export default function Mainpage() {
               <SwiperSlide>
                 <Link to="">
                   <div className="cardContainer">
-                    <img src="./cardgif/motionCard11.gif" alt="" />
+                    <img src="/cardgif/motionCard11.gif" alt="" />
                   </div>
                   <strong>모니카 카드</strong>
                   <p>
@@ -555,7 +557,7 @@ export default function Mainpage() {
               <SwiperSlide>
                 <Link to="">
                   <div className="cardContainer">
-                    <img src="./cardgif/motionCard12.gif" alt="" />
+                    <img src="/cardgif/motionCard12.gif" alt="" />
                   </div>
                   <strong>모니카 카드</strong>
                   <p>
@@ -598,7 +600,7 @@ export default function Mainpage() {
               <SwiperSlide>
                 <Link to="">
                   <div className="cardContainer">
-                    <img src="./cardgif/motionCard05.gif" alt="" />
+                    <img src="/cardgif/motionCard05.gif" alt="" />
                   </div>
                   <strong>모니카 카드2</strong>
                   <p>
@@ -610,7 +612,7 @@ export default function Mainpage() {
               <SwiperSlide>
                 <Link to="">
                   <div className="cardContainer">
-                    <img src="./cardgif/motionCard06.gif" alt="" />
+                    <img src="/cardgif/motionCard06.gif" alt="" />
                   </div>
                   <strong>모니카 카드</strong>
                   <p>
@@ -622,7 +624,7 @@ export default function Mainpage() {
               <SwiperSlide>
                 <Link to="">
                   <div className="cardContainer">
-                    <img src="./cardgif/motionCard07.gif" alt="" />
+                    <img src="/cardgif/motionCard07.gif" alt="" />
                   </div>
                   <strong>모니카 카드</strong>
                   <p>
@@ -634,7 +636,7 @@ export default function Mainpage() {
               <SwiperSlide>
                 <Link to="">
                   <div className="cardContainer">
-                    <img src="./cardgif/motionCard08.gif" alt="" />
+                    <img src="/cardgif/motionCard08.gif" alt="" />
                   </div>
                   <strong>모니카 카드</strong>
                   <p>
@@ -646,7 +648,7 @@ export default function Mainpage() {
               <SwiperSlide>
                 <Link to="">
                   <div className="cardContainer">
-                    <img src="./cardgif/motionCard09.gif" alt="" />
+                    <img src="/cardgif/motionCard09.gif" alt="" />
                   </div>
                   <strong>모니카 카드</strong>
                   <p>
@@ -658,7 +660,7 @@ export default function Mainpage() {
               <SwiperSlide>
                 <Link to="">
                   <div className="cardContainer">
-                    <img src="./cardgif/motionCard10.gif" alt="" />
+                    <img src="/cardgif/motionCard10.gif" alt="" />
                   </div>
                   <strong>모니카 카드</strong>
                   <p>
@@ -670,7 +672,7 @@ export default function Mainpage() {
               <SwiperSlide>
                 <Link to="">
                   <div className="cardContainer">
-                    <img src="./cardgif/motionCard11.gif" alt="" />
+                    <img src="/cardgif/motionCard11.gif" alt="" />
                   </div>
                   <strong>모니카 카드</strong>
                   <p>
@@ -682,7 +684,7 @@ export default function Mainpage() {
               <SwiperSlide>
                 <Link to="">
                   <div className="cardContainer">
-                    <img src="./cardgif/motionCard12.gif" alt="" />
+                    <img src="/cardgif/motionCard12.gif" alt="" />
                   </div>
                   <strong>모니카 카드</strong>
                   <p>
@@ -694,7 +696,7 @@ export default function Mainpage() {
               <SwiperSlide>
                 <Link to="">
                   <div className="cardContainer">
-                    <img src="./cardgif/motionCard01.gif" alt="" />
+                    <img src="/cardgif/motionCard01.gif" alt="" />
                   </div>
                   <strong>모니카 카드</strong>
                   <p>
@@ -706,7 +708,7 @@ export default function Mainpage() {
               <SwiperSlide>
                 <Link to="">
                   <div className="cardContainer">
-                    <img src="./cardgif/motionCard02.gif" alt="" />
+                    <img src="/cardgif/motionCard02.gif" alt="" />
                   </div>
                   <strong>모니카 카드</strong>
                   <p>
@@ -718,7 +720,7 @@ export default function Mainpage() {
               <SwiperSlide>
                 <Link to="">
                   <div className="cardContainer">
-                    <img src="./cardgif/motionCard03.gif" alt="" />
+                    <img src="/cardgif/motionCard03.gif" alt="" />
                   </div>
                   <strong>모니카 카드</strong>
                   <p>
@@ -730,7 +732,7 @@ export default function Mainpage() {
               <SwiperSlide>
                 <Link to="">
                   <div className="cardContainer">
-                    <img src="./cardgif/motionCard04.gif" alt="" />
+                    <img src="/cardgif/motionCard04.gif" alt="" />
                   </div>
                   <strong>모니카 카드</strong>
                   <p>
@@ -753,7 +755,7 @@ export default function Mainpage() {
             </h3>
             <p>최대 5,000만원, 최저이율 연 4.9%</p>
           </Link>
-          <img src="./calculator.png" alt="" />
+          <img src="/calculator.png" alt="" />
         </div>
         <div className="mainShoppingItem">
           <Link to="#" className="shoppingTextbox">
@@ -775,7 +777,7 @@ export default function Mainpage() {
         <div className="mainEventSticky">
           <div className="eventWrap">
             <div className="event">
-              <img src="./mainevent01.png" alt="" />
+              <img src="/mainevent01.png" alt="" />
               <h4>
                 영업용 자동차보험 조회 시 <br />
                 스타벅스 아메리카노 2잔
@@ -783,7 +785,7 @@ export default function Mainpage() {
               <p>2024.05.10~2024.05.31</p>
             </div>
             <div className="event">
-              <img src="./mainevent02.png" alt="" />{" "}
+              <img src="/mainevent02.png" alt="" />{" "}
               <h4>
                 영업용 자동차보험 조회 시 <br />
                 스타벅스 아메리카노 2잔
@@ -791,7 +793,7 @@ export default function Mainpage() {
               <p>2024.05.10~2024.05.31</p>
             </div>
             <div className="event">
-              <img src="./mainevent03.png" alt="" />
+              <img src="/mainevent03.png" alt="" />
               <h4>
                 영업용 자동차보험 조회 시 <br />
                 스타벅스 아메리카노 2잔
@@ -811,7 +813,7 @@ export default function Mainpage() {
               </h4>
               <p>매일매일 다양한 혜택 받기</p>
             </div>
-            <img src="./staticevent01.png" alt="" />
+            <img src="/staticevent01.png" alt="" />
           </div>
           <div className="eventStaticItem">
             <div className="staticTextbox">
@@ -822,7 +824,7 @@ export default function Mainpage() {
               </h4>
               <p>매일매일 다양한 혜택 받기</p>
             </div>
-            <img src="./staticevent02.png" alt="" />
+            <img src="/staticevent02.png" alt="" />
           </div>
           <div className="eventStaticItem">
             <div className="staticTextbox">
@@ -833,7 +835,7 @@ export default function Mainpage() {
               </h4>
               <p>매일매일 다양한 혜택 받기</p>
             </div>
-            <img src="./staticevent03.png" alt="" />
+            <img src="/staticevent03.png" alt="" />
           </div>
           <div className="eventStaticItem">
             <div className="staticTextbox">
@@ -844,7 +846,7 @@ export default function Mainpage() {
               </h4>
               <p>매일매일 다양한 혜택 받기</p>
             </div>
-            <img src="./staticevent04.png" alt="" />
+            <img src="/staticevent04.png" alt="" />
           </div>
         </div>
       </div>
@@ -858,15 +860,15 @@ export default function Mainpage() {
           <h4>고객센터</h4>
           <div>
             <div>
-              <img src="./ascenter01.png" alt="" />
+              <img src="/ascenter01.png" alt="" />
               <p>자주하는 질문</p>
             </div>
             <div>
-              <img src="./ascenter02.png" alt="" />
+              <img src="/ascenter02.png" alt="" />
               <p>자주하는 질문</p>
             </div>
             <div>
-              <img src="./ascenter03.png" alt="" />
+              <img src="/ascenter03.png" alt="" />
               <p>자주하는 질문</p>
             </div>
           </div>
@@ -876,7 +878,7 @@ export default function Mainpage() {
             <h4>금융소비자보호포털</h4>
             <p>소비자 보호 정보를 한눈에!</p>
           </div>
-          {/* <img src="./lock.png" alt="" /> */}
+          {/* <img src="/lock.png" alt="" /> */}
         </div>
       </div>
     </div>
