@@ -1,8 +1,17 @@
+@import "colorVaration.css";
+
 .Mainpage {
   max-width: 1224px;
+  padding-top: calc(162px + 100px);
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
+}
+.mainCover {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
 }
 .mainpageSwiperWrapper {
   max-width: 808px;
@@ -37,31 +46,31 @@
   }
 }
 
-.Mainpage .swiper-pagination {
+.Mainpage .mainCover .swiper-pagination {
   text-align: left;
   padding-left: 30px;
   padding-bottom: 30px;
 }
-.Mainpage .swiper-pagination-bullet {
+.Mainpage .mainCover .swiper-pagination-bullet {
   background-color: #bbb;
   opacity: 100%;
   transition: all 0.3s;
   position: relative;
   width: 6px;
   height: 6px;
+  margin: 0 3px !important;
 }
-.Mainpage .swiper-pagination-bullet-active {
+.Mainpage .mainCover .swiper-pagination-bullet-active {
   background-color: white;
-  width: 24px;
+  width: 20px;
   border-radius: 5px;
 }
 
 .Mainpage .mainpageLogin {
   max-width: 392px;
   height: 462px;
-  flex-grow: 1;
   border-radius: 20px;
-  border: 1px solid #e2e5eb;
+  border: 1px solid var(--color-lineLightGray);
   padding: 24px 17px;
   box-sizing: border-box;
 }
@@ -76,7 +85,7 @@
   font-size: 14px;
   font-weight: 600;
   padding: 16px 0;
-  border-bottom: 1px solid #e2e5eb;
+  border-bottom: 1px solid var(--color-lineLightGray);
 }
 .Mainpage .mainpageLogin .loginButton button:hover {
   background-color: #eee;
@@ -97,10 +106,59 @@
     font-weight: 700;
   }
 }
+.Mainpage .mainpageLogin .loginApp {
+  padding: 0 20px;
+}
+
+.Mainpage .mainpageLogin .loginApp .loginTopItem.loginTapWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  /* padding: 30px 10px 0; */
+  div {
+    display: flex;
+  }
+  div input {
+    max-width: 326px;
+    flex-grow: 1;
+    /* max-width: 100%; */
+    height: 52px;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 0 20px;
+    border: 1px solid var(--color-lineLightGray);
+  }
+}
+.Mainpage .mainpageLogin .loginApp .loginTopItem.loginTapWrap .loginbox {
+  position: relative;
+}
+.Mainpage .mainpageLogin .loginApp .loginTopItem.loginTapWrap .loginCheckbox {
+  position: absolute;
+  right: 0;
+  padding-right: 10px;
+  margin: auto 0;
+  a {
+    margin-top: 16px;
+    display: flex;
+    gap: 8px;
+    color: #aaa;
+    p {
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+  img {
+    width: 23px;
+    height: 23px;
+    object-fit: cover;
+    object-position: 78%;
+  }
+}
 
 .Mainpage .mainpageLogin .loginBtn {
   display: block;
   font-size: 14px;
+  /* width: calc(100% - 20px); */
   width: 100%;
   height: 52px;
   text-align: center;
@@ -116,7 +174,7 @@
   font-weight: 500;
   margin-top: 24px;
   padding-bottom: 24px;
-  border-bottom: 1px solid #e2e5eb;
+  border-bottom: 1px solid var(--color-lineLightGray);
   & a {
     color: #666;
   }
@@ -143,4 +201,383 @@
   background: #e2e5db;
   bottom: 4px;
   right: -19px;
+}
+
+.mainCardWrap {
+  padding: 32px 24px;
+  border: 1px solid var(--color-lineLightGray);
+  border-radius: 20px;
+  margin-bottom: 24px;
+}
+.mainCardWrap .mainCardlist {
+  display: flex;
+  padding-bottom: 40px;
+}
+.mainCardWrap .mainCardlist button {
+  border: none;
+  background: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #888;
+  :hover {
+    color: #111;
+  }
+}
+.mainCardWrap .mainCardlist button.active {
+  color: #111;
+}
+.mainCardWrap button:nth-child(2) {
+  margin-right: auto;
+}
+.mainCardWrap button:nth-child(2)::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 16px;
+  margin: 0 12px 0 12px;
+  background-color: var(--color-lineLightGray);
+}
+.mainCardWrap .mainCardlist a {
+  font-size: 14px;
+  background-color: var(--color-bgLightGray);
+  padding: 3px 19px;
+  border-radius: 20px;
+}
+.mainCardWrap .mainCardlist a:not(:last-child) {
+  margin-right: 12px;
+}
+.mainCardWrap .mySwiper {
+  max-width: 1100px;
+  padding: 0 40px;
+}
+.mainCardWrap .mySwiper .swiper-button-prev,
+.mainCardWrap .mySwiper .swiper-button-next {
+  max-width: 800px;
+  margin: -70px -10px;
+}
+.mainCardWrap .mySwiper .swiper-button-prev::after,
+.mainCardWrap .mySwiper .swiper-button-next::after {
+  font-size: 25px;
+  color: #aaa;
+}
+
+.mainCardWrap .mySwiper .swiper-slide a {
+  text-align: center;
+  margin: 0 auto;
+  img {
+    margin: 0 auto;
+    width: 120px;
+  }
+  strong {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 16px 0 20px;
+    position: relative;
+  }
+  strong::after {
+    content: "new";
+    display: inline-block;
+    position: absolute;
+    top: -33px;
+    left: 0;
+    right: 0;
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 20px;
+    background-color: #ff3289;
+    border: 20px;
+  }
+  p {
+    font-size: 14px;
+    color: #666;
+  }
+}
+
+.mainCardWrap .mySwiper .cardContainer {
+  position: relative;
+}
+
+.mainCardWrap .mySwiper .cardContainer img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.mainCardWrap .mySwiper .cardContainer::before,
+.mainCardWrap .mySwiper .cardContainer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.mainCardWrap .mySwiper .cardContainer::before {
+  width: 120px;
+  background: url(/public/cardgif/hoverIcon.png) no-repeat center/contain;
+  background-size: 30px 30px; /* 크기 조정 */
+  background-color: black;
+  border-radius: 5px;
+  background-position: center 65px;
+}
+
+.mainCardWrap .mySwiper .cardContainer::after {
+  content: "카드 안내/신청";
+  font-size: 12px;
+  color: white;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  padding-bottom: 140px;
+}
+
+.mainCardWrap .mySwiper .cardContainer:hover::before,
+.mainCardWrap .mySwiper .cardContainer:hover::after {
+  opacity: 0.5;
+}
+
+.mainFinanceShopping {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.mainFinanceShopping .mainFinanceItem,
+.mainFinanceShopping .mainShoppingItem {
+  max-width: 600px;
+  height: 274px;
+  background-color: #dcf2fe;
+  border-radius: 10px;
+  box-sizing: border-box;
+  strong {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  h3 {
+    font-size: 24px;
+    margin-top: 16px;
+    line-height: 1.2;
+  }
+  p {
+    font-size: 16px;
+    margin-top: 8px;
+  }
+}
+.mainFinanceShopping .mainFinanceItem {
+  display: flex;
+}
+.mainFinanceShopping .mainFinanceItem .financeTextbox {
+  padding: 32px 24px;
+  margin-right: auto;
+}
+.mainFinanceShopping .mainShoppingItem {
+  padding: 32px 24px;
+  background-color: white;
+  border: 1px solid var(--color-lineLightGray);
+}
+.mainFinanceShopping .mainShoppingItem .shoppingTextbox div {
+  display: flex;
+  > p {
+    font-size: 14px;
+    color: #666;
+  }
+  > p:not(:last-child)::after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 14px;
+    background-color: #e2e5eb;
+    margin: 0 6px;
+  }
+}
+.mainFinanceShopping .mainShoppingItem .shoppingTextbox .shoppingTextboxFlex {
+  span::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: #dcdcdc;
+    border-radius: 50%;
+    margin: 26px 8px 2px;
+  }
+  span {
+    display: inline-block;
+  }
+}
+.mainFinanceShopping .mainShoppingItem .shoppingTextbox a {
+  display: block;
+  width: 318px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 16px;
+  margin-top: 24px;
+  background-color: var(--color-bgLightGray);
+  border-radius: 10px;
+}
+.mainEventsWrap {
+  margin-top: 24px;
+  display: flex;
+}
+.mainEventsWrap .mainEventSticky {
+  position: sticky;
+  height: 100%;
+  top: 162px;
+}
+.mainEventsWrap .mainEventSticky .eventWrap {
+  display: flex;
+  gap: 20px;
+  .event {
+    max-width: 255px;
+    text-align: center;
+    background-color: var(--color-bgLightGray);
+    border-radius: 10px;
+    img {
+      width: 255px;
+    }
+    h4 {
+      font-size: 16px;
+      margin-top: 24px;
+    }
+    p {
+      font-size: 14px;
+      color: #666;
+      margin: 10px 0 36px;
+    }
+  }
+}
+.mainEventsWrap .mainEventSticky a {
+  display: block;
+  text-align: center;
+  padding: 13px 14px 12px;
+  margin-top: 24px;
+  border-radius: 10px;
+  background-color: var(--color-bgLightGray);
+  font-weight: 600;
+  transition: all 0.2s;
+}
+.mainEventsWrap .mainEventSticky a:hover {
+  background-color: #dbe2f3;
+}
+
+.mainEventsWrap .mainEventStatic {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  margin-left: 24px;
+}
+.mainEventsWrap .mainEventStatic img {
+  display: block;
+  width: 160px;
+}
+.mainEventsWrap .mainEventStatic .eventStaticItem {
+  display: flex;
+  width: 392px;
+  height: 208px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: #f9fafc;
+  /* position: relative; */
+  .staticTextbox {
+    padding: 32px 24px;
+    margin-right: auto;
+  }
+  span {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 8px 3px;
+    border-radius: 10px;
+    background-color: #111;
+    color: white;
+  }
+  h4 {
+    font-size: 24px;
+    color: #111;
+    margin-top: 8px;
+    line-height: 1.2;
+  }
+  p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 8px;
+  }
+}
+.mainEventsWrap .mainEventStatic .eventStaticItem:last-child {
+  margin-bottom: 0;
+}
+
+.mainInfoBottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 24px 0 50px;
+}
+.mainInfoBottom > div {
+  padding: 32px 24px;
+  box-sizing: border-box;
+  border: 1px solid var(--color-lineLightGray);
+  border-radius: 10px;
+  h4 {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  p {
+    font-size: 16px;
+    margin-top: 23px;
+  }
+  span {
+    font-size: 14px;
+    margin-top: 8px;
+    color: #666;
+  }
+}
+.mainInfoBottom div h4::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(/public/arrowSide.png) no-repeat center/cover;
+  transform: translateY(4px);
+  margin-left: 4px;
+}
+.mainInfoBottom .info02 > div {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 17px;
+  text-align: center;
+  & img {
+    width: 24px;
+    display: block;
+  }
+  & p {
+    margin-top: 8px;
+  }
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.mainInfoBottom .info03 {
+  display: flex;
+  justify-content: space-between;
+  background: url(/public/lock.png) no-repeat right/cover;
+  background-size: 120px;
+  h4 {
+    font-size: 24px;
+  }
+  h4::after {
+    display: none;
+  }
+  p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 2px;
+  }
 }

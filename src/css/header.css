@@ -1,4 +1,10 @@
+@import "./colorVaration.css";
+
 .header {
+  border-bottom: 1px solid var(--color-lineLightGray);
+  height: 162px;
+}
+.headerWrapper {
   margin: 0 auto;
   max-width: 1224px;
   height: 162px;
@@ -7,29 +13,29 @@
   box-sizing: border-box;
 }
 
-.header .miniMenuWrapper {
+.headerWrapper .miniMenuWrapper {
   display: flex;
   justify-content: space-between;
   padding: 28px 0 36px;
 }
-.header .miniMenuWrapper .miniMenuLink,
-.header .miniMenuWrapper .miniMenuLogin {
+.headerWrapper .miniMenuWrapper .miniMenuLink,
+.headerWrapper .miniMenuWrapper .miniMenuLogin {
   display: flex;
 }
 
-.header .miniMenuWrapper .miniMenuLink li a,
-.header .miniMenuWrapper .miniMenuLogin li a {
+.headerWrapper .miniMenuWrapper .miniMenuLink li a,
+.headerWrapper .miniMenuWrapper .miniMenuLogin li a {
   font-size: 14px;
   color: #666666;
 }
 
-.header .miniMenuWrapper .miniMenuLink li:not(:last-child)::after,
-.header .miniMenuWrapper .miniMenuLogin li:not(:last-child)::after {
+.headerWrapper .miniMenuWrapper .miniMenuLink li:not(:last-child)::after,
+.headerWrapper .miniMenuWrapper .miniMenuLogin li:not(:last-child)::after {
   content: "";
   display: inline-block;
   width: 1px;
   height: 10px;
-  background-color: #e2e5eb;
+  background-color: var(--color-lineLightGray);
   margin: 0 10px;
 }
 
