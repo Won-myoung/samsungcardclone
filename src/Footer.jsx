@@ -1,5 +1,5 @@
 import "./css/footer.css";
-import React /* useRef, */ /* useState */ from "react";
+import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -49,12 +49,17 @@ export default function Footer() {
         <div className="footer05">© SAMSUNG CARD CO., LTD. All rights reserved.</div>
         <div className="footer06">
           <Swiper
-            slidesPerView={5}
+            slidesPerView={2}
+            spaceBetween={10}
             loop={true}
             className="mySwiper"
             navigation={true}
-            modules={(Pagination, Navigation)}
+            modules={[Navigation]}
             breakpoints={{
+              0: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
               640: {
                 slidesPerView: 3,
                 spaceBetween: 20,

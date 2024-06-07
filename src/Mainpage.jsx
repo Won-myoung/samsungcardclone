@@ -2,7 +2,7 @@ import "./css/mainpage.css";
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { Pagination, Autoplay, Navigation } from "swiper/modules";
+import { Pagination, Autoplay, Navigation, FreeMode } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -306,53 +306,82 @@ export default function Mainpage() {
           <div className="loginApp">
             {currentTab === "loginTap01" && (
               <div className="loginTopItem">
-                <img src="loginBtnAppImg01.png" alt="" />
-                <p>
-                  삼성카드 앱의 <br />
-                  결제 비밀번호로 로그인 해주세요.
-                </p>
+                <div className="loginTopItemVisual">
+                  <img src="loginBtnAppImg01.png" alt="" />
+                  <p>
+                    삼성카드 앱의 <br />
+                    결제 비밀번호로 로그인 해주세요.
+                  </p>
+                </div>
+                <Link to="#" className="loginBtn">
+                  로그인
+                </Link>
+                <div className="loginInfo">
+                  <Link to="#">삼성카드 앱 안내</Link>
+                  <Link to="#">회원가입</Link>
+                </div>
               </div>
             )}
             {currentTab === "loginTap02" && (
               <div className="loginTopItem loginTapWrap">
-                <div className="loginbox">
-                  <input type="text" placeholder="아이디 6~12자리 입력" />
-                  <div className="loginCheckbox">
-                    <Link to="#">
-                      <img src="loginBtnAppImg02-1.png" alt="" />
-                      <p>저장</p>
-                    </Link>
+                <div className="loginTopItemVisual">
+                  <div className="loginbox">
+                    <input type="text" placeholder="아이디 6~12자리 입력" />
+                    <div className="loginCheckbox">
+                      <Link to="#">
+                        <img src="loginBtnAppImg02-1.png" alt="" />
+                        <p>저장</p>
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="loginbox">
+                    <input type="text" placeholder="비밀번호 6~20자리 입력" />
+                    <div className="loginCheckbox">
+                      <Link to="#">
+                        <img src="loginBtnAppImg02-2.png" alt="" />
+                      </Link>
+                    </div>
                   </div>
                 </div>
-                <div className="loginbox">
-                  <input type="text" placeholder="비밀번호 6~20자리 입력" />
-                  <div className="loginCheckbox">
-                    <Link to="#">
-                      <img src="loginBtnAppImg02-2.png" alt="" />
-                    </Link>
-                  </div>
+                <Link to="#" className="loginBtn">
+                  로그인
+                </Link>
+                <div className="loginInfo">
+                  <Link to="#">아이디/비밀번호찾기</Link>
+                  <Link to="#">회원가입</Link>
                 </div>
               </div>
             )}
             {currentTab === "loginTap03" && (
               <div className="loginTopItem">
-                <img src="loginBtnAppImg03.png" alt="" />
-                <p>금융인증서로 로그인 해주세요.</p>
+                <div className="loginTopItemVisual">
+                  <img src="loginBtnAppImg03.png" alt="" />
+                  <p>금융인증서로 로그인 해주세요.</p>
+                </div>
+                <Link to="#" className="loginBtn">
+                  로그인
+                </Link>
+                <div className="loginInfo">
+                  <Link to="#">인증서 등록</Link>
+                  <Link to="#">회원가입</Link>
+                </div>
               </div>
             )}
             {currentTab === "loginTap04" && (
               <div className="loginTopItem">
-                <img src="loginBtnAppImg04.png" alt="" />
-                <p>공동인증서로 로그인 해주세요.</p>
+                <div className="loginTopItemVisual">
+                  <img src="loginBtnAppImg04.png" alt="" />
+                  <p>공동인증서로 로그인 해주세요.</p>
+                </div>
+                <Link to="#" className="loginBtn">
+                  로그인
+                </Link>
+                <div className="loginInfo">
+                  <Link to="#">인증서 등록</Link>
+                  <Link to="#">회원가입</Link>
+                </div>
               </div>
             )}
-            <Link to="#" className="loginBtn">
-              로그인
-            </Link>
-            <div className="loginInfo">
-              <Link to="#">삼성카드 앱 안내</Link>
-              <Link to="#">회원가입</Link>
-            </div>
           </div>
           <ul className="loginBottomBtn">
             <li>
@@ -375,7 +404,7 @@ export default function Mainpage() {
         </div>
       </div>
       <div className="mainCardWrap">
-        <div className="mainCardlist PCversion">
+        <div className="mainCardlist ">
           <button
             onClick={() => handleCardButtonClick("cardTap01")}
             className={currentTabCard === "cardTap01" ? "active" : ""}
@@ -395,28 +424,28 @@ export default function Mainpage() {
           </div>
         </div>
         {currentTabCard === "cardTap01" && (
-          <div className="cardTap01">
+          <div className="cardTap01 pcMode">
             <Swiper
-              slidesPerView={3}
-              spaceBetween={30}
+              slidesPerView={5}
+              // spaceBetween={20}
               breakpoints={{
                 640: {
                   slidesPerView: 3,
-                  spaceBetween: 20,
+                  // spaceBetween: 20,
                   slidesPerGroup: 3,
                 },
                 768: {
                   slidesPerView: 4,
-                  spaceBetween: 30,
+                  // spaceBetween: 20,
                   slidesPerGroup: 4,
                 },
                 1024: {
                   slidesPerView: 5,
-                  spaceBetween: 40,
+                  // spaceBetween: 20,
                   slidesPerGroup: 5,
                 },
                 loop: true,
-                loopFillGroupWithBlank: true,
+                // loopFillGroupWithBlank: true,
               }}
               navigation={true}
               modules={[/* Pagination, */ Navigation]}
@@ -570,7 +599,7 @@ export default function Mainpage() {
           </div>
         )}
         {currentTabCard === "cardTap02" && (
-          <div className="cardTap02">
+          <div className="cardTap02 pcMode">
             <Swiper
               slidesPerView={3}
               spaceBetween={30}
@@ -744,18 +773,371 @@ export default function Mainpage() {
             </Swiper>
           </div>
         )}
+        {currentTabCard === "cardTap01" && (
+          <div className="cardTap01 mobileMode">
+            <Swiper
+              slidesPerView={3}
+              spaceBetween={30}
+              freeMode={true}
+              breakpoints={{
+                640: {
+                  slidesPerView: 3,
+                  spaceBetween: 20,
+                  slidesPerGroup: 3,
+                },
+                768: {
+                  slidesPerView: 4,
+                  spaceBetween: 30,
+                  slidesPerGroup: 4,
+                },
+                1024: {
+                  slidesPerView: 5,
+                  spaceBetween: 40,
+                  slidesPerGroup: 5,
+                },
+                loop: true,
+                loopFillGroupWithBlank: true,
+              }}
+              navigation={true}
+              modules={[FreeMode, Navigation]}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+                <Link to="">
+                  <div className="cardContainer">
+                    <img src="/cardgif/motionCard01.gif" alt="" />
+                  </div>
+                  <strong>모니카 카드1</strong>
+                  <p>
+                    스타벅스 50% <br />
+                    스트리밍 30%할인
+                  </p>
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to="">
+                  <div className="cardContainer">
+                    <img src="/cardgif/motionCard02.gif" alt="" />
+                  </div>
+                  <strong>모니카 카드</strong>
+                  <p>
+                    스타벅스 50% <br />
+                    스트리밍 30%할인
+                  </p>
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to="">
+                  <div className="cardContainer">
+                    <img src="/cardgif/motionCard03.gif" alt="" />
+                  </div>
+                  <strong>모니카 카드</strong>
+                  <p>
+                    스타벅스 50% <br />
+                    스트리밍 30%할인
+                  </p>
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to="">
+                  <div className="cardContainer">
+                    <img src="/cardgif/motionCard04.gif" alt="" />
+                  </div>
+                  <strong>모니카 카드</strong>
+                  <p>
+                    스타벅스 50% <br />
+                    스트리밍 30%할인
+                  </p>
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to="">
+                  <div className="cardContainer">
+                    <img src="/cardgif/motionCard05.gif" alt="" />
+                  </div>
+                  <strong>모니카 카드</strong>
+                  <p>
+                    스타벅스 50% <br />
+                    스트리밍 30%할인
+                  </p>
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to="">
+                  <div className="cardContainer">
+                    <img src="/cardgif/motionCard06.gif" alt="" />
+                  </div>
+                  <strong>모니카 카드</strong>
+                  <p>
+                    스타벅스 50% <br />
+                    스트리밍 30%할인
+                  </p>
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to="">
+                  <div className="cardContainer">
+                    <img src="/cardgif/motionCard07.gif" alt="" />
+                  </div>
+                  <strong>모니카 카드</strong>
+                  <p>
+                    스타벅스 50% <br />
+                    스트리밍 30%할인
+                  </p>
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to="">
+                  <div className="cardContainer">
+                    <img src="/cardgif/motionCard08.gif" alt="" />
+                  </div>
+                  <strong>모니카 카드</strong>
+                  <p>
+                    스타벅스 50% <br />
+                    스트리밍 30%할인
+                  </p>
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to="">
+                  <div className="cardContainer">
+                    <img src="/cardgif/motionCard09.gif" alt="" />
+                  </div>
+                  <strong>모니카 카드</strong>
+                  <p>
+                    스타벅스 50% <br />
+                    스트리밍 30%할인
+                  </p>
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to="">
+                  <div className="cardContainer">
+                    <img src="/cardgif/motionCard10.gif" alt="" />
+                  </div>
+                  <strong>모니카 카드</strong>
+                  <p>
+                    스타벅스 50% <br />
+                    스트리밍 30%할인
+                  </p>
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to="">
+                  <div className="cardContainer">
+                    <img src="/cardgif/motionCard11.gif" alt="" />
+                  </div>
+                  <strong>모니카 카드</strong>
+                  <p>
+                    스타벅스 50% <br />
+                    스트리밍 30%할인
+                  </p>
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to="">
+                  <div className="cardContainer">
+                    <img src="/cardgif/motionCard12.gif" alt="" />
+                  </div>
+                  <strong>모니카 카드</strong>
+                  <p>
+                    스타벅스 50% <br />
+                    스트리밍 30%할인
+                  </p>
+                </Link>
+              </SwiperSlide>
+            </Swiper>
+          </div>
+        )}
+        {currentTabCard === "cardTap02" && (
+          <div className="cardTap02 mobileMode">
+            <Swiper
+              slidesPerView={3}
+              spaceBetween={30}
+              freeMode={true}
+              breakpoints={{
+                640: {
+                  slidesPerView: 3,
+                  spaceBetween: 20,
+                  slidesPerGroup: 3,
+                },
+                768: {
+                  slidesPerView: 4,
+                  spaceBetween: 30,
+                  slidesPerGroup: 4,
+                },
+                1024: {
+                  slidesPerView: 5,
+                  spaceBetween: 40,
+                  slidesPerGroup: 5,
+                },
+                loop: true,
+                loopFillGroupWithBlank: true,
+              }}
+              navigation={true}
+              modules={[FreeMode, Navigation]}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+                <Link to="">
+                  <div className="cardContainer">
+                    <img src="/cardgif/motionCard05.gif" alt="" />
+                  </div>
+                  <strong>모니카 카드2</strong>
+                  <p>
+                    스타벅스 50% <br />
+                    스트리밍 30%할인
+                  </p>
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to="">
+                  <div className="cardContainer">
+                    <img src="/cardgif/motionCard06.gif" alt="" />
+                  </div>
+                  <strong>모니카 카드</strong>
+                  <p>
+                    스타벅스 50% <br />
+                    스트리밍 30%할인
+                  </p>
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to="">
+                  <div className="cardContainer">
+                    <img src="/cardgif/motionCard07.gif" alt="" />
+                  </div>
+                  <strong>모니카 카드</strong>
+                  <p>
+                    스타벅스 50% <br />
+                    스트리밍 30%할인
+                  </p>
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to="">
+                  <div className="cardContainer">
+                    <img src="/cardgif/motionCard08.gif" alt="" />
+                  </div>
+                  <strong>모니카 카드</strong>
+                  <p>
+                    스타벅스 50% <br />
+                    스트리밍 30%할인
+                  </p>
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to="">
+                  <div className="cardContainer">
+                    <img src="/cardgif/motionCard09.gif" alt="" />
+                  </div>
+                  <strong>모니카 카드</strong>
+                  <p>
+                    스타벅스 50% <br />
+                    스트리밍 30%할인
+                  </p>
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to="">
+                  <div className="cardContainer">
+                    <img src="/cardgif/motionCard10.gif" alt="" />
+                  </div>
+                  <strong>모니카 카드</strong>
+                  <p>
+                    스타벅스 50% <br />
+                    스트리밍 30%할인
+                  </p>
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to="">
+                  <div className="cardContainer">
+                    <img src="/cardgif/motionCard11.gif" alt="" />
+                  </div>
+                  <strong>모니카 카드</strong>
+                  <p>
+                    스타벅스 50% <br />
+                    스트리밍 30%할인
+                  </p>
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to="">
+                  <div className="cardContainer">
+                    <img src="/cardgif/motionCard12.gif" alt="" />
+                  </div>
+                  <strong>모니카 카드</strong>
+                  <p>
+                    스타벅스 50% <br />
+                    스트리밍 30%할인
+                  </p>
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to="">
+                  <div className="cardContainer">
+                    <img src="/cardgif/motionCard01.gif" alt="" />
+                  </div>
+                  <strong>모니카 카드</strong>
+                  <p>
+                    스타벅스 50% <br />
+                    스트리밍 30%할인
+                  </p>
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to="">
+                  <div className="cardContainer">
+                    <img src="/cardgif/motionCard02.gif" alt="" />
+                  </div>
+                  <strong>모니카 카드</strong>
+                  <p>
+                    스타벅스 50% <br />
+                    스트리밍 30%할인
+                  </p>
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to="">
+                  <div className="cardContainer">
+                    <img src="/cardgif/motionCard03.gif" alt="" />
+                  </div>
+                  <strong>모니카 카드</strong>
+                  <p>
+                    스타벅스 50% <br />
+                    스트리밍 30%할인
+                  </p>
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link to="">
+                  <div className="cardContainer">
+                    <img src="/cardgif/motionCard04.gif" alt="" />
+                  </div>
+                  <strong>모니카 카드</strong>
+                  <p>
+                    스타벅스 50% <br />
+                    스트리밍 30%할인
+                  </p>
+                </Link>
+              </SwiperSlide>
+            </Swiper>
+          </div>
+        )}
       </div>
       <div className="mainFinanceShopping">
         <div className="mainFinanceItem">
           <Link to="#" className="financeTextbox">
             <strong>금융</strong>
             <h3>
-              목돈이 필요할 때 상환수수료 없이! <br />
+              목돈이 필요할 때 <br />
+              상환수수료 없이! <br />
               장기카드대출!
             </h3>
             <p>최대 5,000만원, 최저이율 연 4.9%</p>
           </Link>
-          <img src="/calculator.png" alt="" />
+          {/* <img src="/calculator.png" alt="" /> */}
         </div>
         <div className="mainShoppingItem">
           <Link to="#" className="shoppingTextbox">
@@ -813,7 +1195,6 @@ export default function Mainpage() {
               </h4>
               <p>매일매일 다양한 혜택 받기</p>
             </div>
-            <img src="/staticevent01.png" alt="" />
           </div>
           <div className="eventStaticItem">
             <div className="staticTextbox">
@@ -824,7 +1205,6 @@ export default function Mainpage() {
               </h4>
               <p>매일매일 다양한 혜택 받기</p>
             </div>
-            <img src="/staticevent02.png" alt="" />
           </div>
           <div className="eventStaticItem">
             <div className="staticTextbox">
@@ -835,7 +1215,6 @@ export default function Mainpage() {
               </h4>
               <p>매일매일 다양한 혜택 받기</p>
             </div>
-            <img src="/staticevent03.png" alt="" />
           </div>
           <div className="eventStaticItem">
             <div className="staticTextbox">
@@ -846,15 +1225,16 @@ export default function Mainpage() {
               </h4>
               <p>매일매일 다양한 혜택 받기</p>
             </div>
-            <img src="/staticevent04.png" alt="" />
           </div>
         </div>
       </div>
       <div className="mainInfoBottom">
         <div className="info01">
           <h4>공지사항</h4>
-          <p>종합소득세 신고용 카드 이용내역서 조회 및...</p>
-          <span>24.04.29</span>
+          <div>
+            <p>종합소득세 신고용 카드 이용내역서 조회 및...</p>
+            <span>24.04.29</span>
+          </div>
         </div>
         <div className="info02">
           <h4>고객센터</h4>

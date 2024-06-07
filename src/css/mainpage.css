@@ -4,8 +4,8 @@
   max-width: 1224px;
   padding-top: calc(162px + 100px);
   margin: 0 auto;
-  /* display: flex;
-  justify-content: space-between; */
+  word-break: normal;
+  box-sizing: border-box;
 }
 .mainCover {
   display: grid;
@@ -72,36 +72,10 @@
 
 .Mainpage .mainpageLogin {
   max-width: 392px;
-  /* height: 462px; */
   border-radius: 20px;
   border: 1px solid var(--color-lineLightGray);
   padding: 24px 17px;
   box-sizing: border-box;
-}
-@media (max-width: 1000px) {
-  .Mainpage {
-    width: 100%;
-  }
-  .Mainpage .mainCover {
-    display: flex;
-  }
-  .Mainpage .mainCover .mainpageSwiperWrapper {
-    display: flex;
-    flex-grow: 1;
-    max-width: 1000px;
-    aspect-ratio: 75/45;
-  }
-  .Mainpage .mainpageLogin {
-    display: none;
-  }
-}
-@media (max-width: 700px) {
-  .Mainpage .mainCover .mainpageSwiperWrapper {
-    box-sizing: border-box;
-    max-width: 700px;
-    max-height: 350px;
-    aspect-ratio: 75/35;
-  }
 }
 
 .Mainpage .mainpageLogin .loginButton {
@@ -124,7 +98,6 @@
   border-bottom: 3px solid #333;
 }
 .Mainpage .mainpageLogin .loginTopItem {
-  height: 138px;
   padding-top: 30px;
   text-align: center;
   & img {
@@ -136,28 +109,37 @@
     font-weight: 700;
   }
 }
+.Mainpage .mainpageLogin .loginTopItem .loginTopItemVisual {
+  height: 140px;
+}
 .Mainpage .mainpageLogin .loginApp {
   padding: 0 20px;
+  height: 284px;
 }
 
-.Mainpage .mainpageLogin .loginApp .loginTopItem.loginTapWrap {
+.Mainpage .mainpageLogin .loginApp .loginTopItem.loginTapWrap .loginTopItemVisual {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  /* padding: 30px 10px 0; */
   div {
     display: flex;
   }
   div input {
     max-width: 326px;
     flex-grow: 1;
-    /* max-width: 100%; */
     height: 52px;
     font-weight: 600;
     border-radius: 10px;
     padding: 0 20px;
     border: 1px solid var(--color-lineLightGray);
   }
+}
+.Mainpage
+  .mainpageLogin
+  .loginApp
+  .loginTopItem.loginTapWrap
+  .loginTopItemVisual
+  .loginbox:first-child {
+  margin-bottom: 15px;
 }
 .Mainpage .mainpageLogin .loginApp .loginTopItem.loginTapWrap .loginbox {
   position: relative;
@@ -188,7 +170,6 @@
 .Mainpage .mainpageLogin .loginBtn {
   display: block;
   font-size: 14px;
-  /* width: calc(100% - 20px); */
   width: 100%;
   height: 52px;
   text-align: center;
@@ -196,6 +177,7 @@
   color: white;
   border-radius: 10px;
   background-color: #2090ff;
+  margin-top: auto;
 }
 .Mainpage .mainpageLogin .loginInfo {
   display: flex;
@@ -244,6 +226,12 @@
   padding-bottom: 40px;
   flex-wrap: wrap;
 }
+.mainCardWrap .cardTap01.mobileMode,
+.mainCardWrap .cardTap02.mobileMode {
+  overflow: hidden;
+  display: none;
+}
+
 .mainCardWrap .mainCardlist button {
   border: none;
   background: none;
@@ -277,15 +265,11 @@
 .mainCardWrap .mainCardlist a:not(:last-child) {
   margin-right: 12px;
 }
-@media (max-width: 700px) {
-  .mainCardWrap .mainCardlist > div {
-    margin-left: auto;
-    margin-top: 20px;
-  }
-}
+
 .mainCardWrap .mySwiper {
-  max-width: 1100px;
-  padding: 0 40px;
+  padding: 0 30px;
+  box-sizing: border-box;
+  display: grid;
 }
 .mainCardWrap .mySwiper .swiper-button-prev,
 .mainCardWrap .mySwiper .swiper-button-next {
@@ -303,7 +287,7 @@
   margin: 0 auto;
   img {
     margin: 0 auto;
-    width: 120px;
+    max-width: 120px;
   }
   strong {
     display: block;
@@ -337,6 +321,9 @@
 
 .mainCardWrap .mySwiper .cardContainer {
   position: relative;
+  width: 120px;
+  inset: 0;
+  margin: 0 auto;
 }
 
 .mainCardWrap .mySwiper .cardContainer img {
@@ -357,9 +344,9 @@
   transition: opacity 0.3s ease;
 }
 .mainCardWrap .mySwiper .cardContainer::before {
-  width: 120px;
+  max-width: 120px;
   background: url(/public/cardgif/hoverIcon.png) no-repeat center/contain;
-  background-size: 30px 30px; /* 크기 조정 */
+  background-size: 30px 30px;
   background-color: black;
   border-radius: 5px;
   background-position: center 65px;
@@ -370,9 +357,8 @@
   font-size: 12px;
   color: white;
   display: flex;
-  align-items: end;
   justify-content: center;
-  padding-bottom: 140px;
+  margin-top: 110px;
 }
 
 .mainCardWrap .mySwiper .cardContainer:hover::before,
@@ -387,7 +373,7 @@
 }
 .mainFinanceShopping .mainFinanceItem,
 .mainFinanceShopping .mainShoppingItem {
-  max-width: 600px;
+  width: 100%;
   height: 274px;
   background-color: #dcf2fe;
   border-radius: 10px;
@@ -408,10 +394,22 @@
 }
 .mainFinanceShopping .mainFinanceItem {
   display: flex;
+  position: relative;
 }
+.mainFinanceShopping .mainFinanceItem::after {
+  content: "";
+  display: inline-block;
+  height: 274px;
+  width: 212px;
+  background: url(/public/calculator.png) no-repeat center/cover;
+}
+
 .mainFinanceShopping .mainFinanceItem .financeTextbox {
   padding: 32px 24px;
   margin-right: auto;
+  & h3 {
+    font-weight: 600;
+  }
 }
 .mainFinanceShopping .mainShoppingItem {
   padding: 32px 24px;
@@ -420,6 +418,9 @@
 }
 .mainFinanceShopping .mainShoppingItem .shoppingTextbox div {
   display: flex;
+  & h3 {
+    font-weight: 600;
+  }
   > p {
     font-size: 14px;
     color: #666;
@@ -449,7 +450,7 @@
 }
 .mainFinanceShopping .mainShoppingItem .shoppingTextbox a {
   display: block;
-  width: 318px;
+  max-width: 318px;
   font-size: 14px;
   font-weight: 600;
   padding: 16px;
@@ -459,24 +460,25 @@
 }
 .mainEventsWrap {
   margin-top: 24px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
 }
 .mainEventsWrap .mainEventSticky {
   position: sticky;
-  height: 100%;
+  margin-bottom: auto;
   top: 162px;
 }
 .mainEventsWrap .mainEventSticky .eventWrap {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   .event {
-    max-width: 255px;
     text-align: center;
     background-color: var(--color-bgLightGray);
     border-radius: 10px;
     overflow: hidden;
     img {
-      width: 255px;
+      width: 100%;
     }
     h4 {
       font-size: 16px;
@@ -505,25 +507,21 @@
 
 .mainEventsWrap .mainEventStatic {
   margin-left: auto;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  gap: 20px;
   margin-left: 24px;
 }
-.mainEventsWrap .mainEventStatic img {
-  display: block;
-  width: 160px;
-}
+
 .mainEventsWrap .mainEventStatic .eventStaticItem {
-  display: flex;
-  width: 392px;
-  height: 208px;
+  width: 100%;
+  height: 100%;
   box-sizing: border-box;
   margin-bottom: 20px;
   border-radius: 10px;
+  background: url(/public/staticevent01.png) no-repeat right/contain;
   background-color: #f9fafc;
-  /* position: relative; */
   .staticTextbox {
-    padding: 32px 24px;
+    padding: 32px 0 32px 24px;
     margin-right: auto;
   }
   span {
@@ -536,6 +534,7 @@
   }
   h4 {
     font-size: 24px;
+    font-weight: 600;
     color: #111;
     margin-top: 8px;
     line-height: 1.2;
@@ -546,8 +545,31 @@
     margin-top: 8px;
   }
 }
+.mainEventsWrap .mainEventStatic .eventStaticItem:nth-child(2) {
+  background: url(/public/staticevent02.png) no-repeat right/contain;
+  background-color: #f9fafc;
+}
+.mainEventsWrap .mainEventStatic .eventStaticItem:nth-child(3) {
+  background: url(/public/staticevent03.png) no-repeat right/contain;
+  background-color: #f9fafc;
+}
+.mainEventsWrap .mainEventStatic .eventStaticItem:nth-child(4) {
+  background: url(/public/staticevent04.png) no-repeat right/contain;
+  background-color: #f9fafc;
+}
 .mainEventsWrap .mainEventStatic .eventStaticItem:last-child {
   margin-bottom: 0;
+}
+.mainEventsWrap .mainEventStatic .eventStaticItem .staticImg {
+  display: flex;
+  height: 100%;
+  & img {
+    bottom: 0;
+    max-width: 100%;
+    right: 0;
+    display: block;
+    margin-top: auto;
+  }
 }
 
 .mainInfoBottom {
@@ -605,7 +627,7 @@
 .mainInfoBottom .info03 {
   display: flex;
   justify-content: space-between;
-  background: url(/public/lock.png) no-repeat right/cover;
+  background: url(/public/lock.png) no-repeat bottom right/ cover;
   background-size: 120px;
   h4 {
     font-size: 24px;
@@ -617,5 +639,100 @@
     font-size: 16px;
     color: #666;
     margin-top: 2px;
+  }
+}
+
+@media (max-width: 900px) {
+  .Mainpage {
+    width: 100%;
+  }
+  .Mainpage .mainCover {
+    display: flex;
+  }
+  .Mainpage .mainCover .mainpageSwiperWrapper {
+    display: flex;
+    flex-grow: 1;
+    max-width: 1000px;
+    aspect-ratio: 75/45;
+  }
+  .Mainpage .mainpageLogin {
+    display: none;
+  }
+}
+@media (max-width: 900px) {
+  .Mainpage .mainFinanceShopping {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  .mainEventsWrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .mainEventsWrap .mainEventSticky {
+    position: static;
+  }
+  .mainEventsWrap .mainEventStatic {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-left: 0;
+    flex-grow: 1;
+  }
+  .mainEventsWrap .mainEventStatic .eventStaticItem {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    margin: 0;
+  }
+}
+@media (max-width: 700px) {
+  .Mainpage .mainCover .mainpageSwiperWrapper {
+    box-sizing: border-box;
+    max-width: 700px;
+    max-height: 350px;
+    aspect-ratio: 75/35;
+  }
+
+  .mainCardWrap .mainCardlist > div {
+    margin-left: auto;
+    margin-top: 20px;
+  }
+
+  .mainCardWrap .cardTap01.mobileMode,
+  .mainCardWrap .cardTap02.mobileMode {
+    display: block;
+  }
+  .mainCardWrap .cardTap01.pcMode,
+  .mainCardWrap .cardTap02.pcMode {
+    display: none;
+  }
+  .mainCardWrap .cardContainer img {
+    width: 90px !important;
+  }
+  .mainCardWrap .mySwiper .cardContainer {
+    width: 90px;
+  }
+  .mainEventsWrap .mainEventStatic {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .mainInfoBottom {
+    display: flex;
+    flex-direction: column;
+  }
+  .mainInfoBottom .info01 > div {
+    display: flex;
+    justify-content: space-between;
+    & span {
+      margin-top: 25px;
+    }
+  }
+
+  .mainInfoBottom .info02 > div > div > img {
+    width: 50px;
   }
 }

@@ -1,0 +1,71 @@
+@import "colorVaration.css";
+/* 
+img {
+  display: block;
+}
+ */
+.showAll {
+  max-width: 940px;
+}
+.showAllWrap > h4 {
+  font-size: 20px;
+  color: #7b7e86;
+}
+.showAllButton {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.showAllButton button {
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  color: #575b63;
+  border: none;
+  background-color: #f3f5f8;
+  padding: 0 20px;
+  border-radius: 30px;
+}
+.showAllButton button.active {
+  background-color: #2e81f8;
+  color: white;
+  font-weight: 600;
+}
+.showAll .showAllBody .showAllBodyItem {
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    width: 50%;
+    height: 110px;
+  }
+  li a {
+    display: flex;
+    padding: 30px 0 18px;
+    & img {
+      width: 32px;
+      height: 32px;
+      margin-right: 20px;
+    }
+    h4 {
+      font-size: 20px;
+      padding: 0;
+    }
+    h4:hover {
+      color: #7b7e86;
+    }
+    p,
+    span {
+      font-size: 16px;
+      color: #7b7e86;
+      padding-top: 10px;
+    }
+    span {
+      color: #1d55a6;
+    }
+  }
+}
+
+.showAllWrap > h4 {
+  padding-top: 50px;
+}

@@ -3,13 +3,15 @@
 .header {
   border-bottom: 1px solid var(--color-lineLightGray);
   height: 162px;
+  overflow: hidden;
 }
 .headerWrapper {
   margin: 0 auto;
   max-width: 1224px;
   height: 162px;
   background-color: white;
-  /* padding: 0 20px; */
+  /* opacity: 0.5; */
+  padding: 0 20px;
   box-sizing: border-box;
 }
 
@@ -46,30 +48,26 @@
 }
 .topMenuWrapper .topMenuLogo img {
   width: 158px;
-  padding-right: 100px;
+  /* padding-right: 100px; */
   transform: translateY(4px);
 }
 
 .topMenuWrapper .topMenuCenter {
   display: flex;
   justify-content: space-between;
-  max-width: 580px;
+  max-width: 500px;
   flex-grow: 1;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
   color: #111;
 }
 .topMenuWrapper .topMenuCenter a:hover {
   color: #2090ff;
   border-bottom: 3px solid #2090ff;
 }
-/* .topMenuWrapper .topMenuCenter li:not(:first-child) {
-  margin-left: 70px;
-}
-*/
+
 .topMenuIcons {
   display: flex;
-  padding-left: 100px;
   gap: 10px;
 }
 .topMenuSearch,
@@ -85,14 +83,12 @@
   background: url(/public/mainIcon02.png) no-repeat center/cover;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 900px) {
   .topMenuWrapper .topMenuCenter {
     font-size: 16px;
+    padding: 0 30px;
+    max-width: 400px;
   }
-  .topMenuWrapper .topMenuLogo img {
-    padding-right: 70px;
-  }
-  .topMenuIcons {
-    padding-left: 70px;
+  .topMenuWrapper .topMenuCenter {
   }
 }

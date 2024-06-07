@@ -1,0 +1,405 @@
+@import "colorVaration.css";
+
+/* reset */
+img {
+  display: block;
+}
+
+.section {
+  width: 100%;
+  /* height: 100vh; */
+  height: auto;
+  /* border: 2px solid red; */
+  border-bottom: 1px solid var(--color-lineLightGray);
+  padding: 50px 0;
+}
+
+.payment {
+  max-width: 1016px;
+  padding: 0 20px;
+  margin: calc(162px + 100px) auto 50px;
+  box-sizing: border-box;
+}
+.paymentCover {
+  padding: 60px 52px;
+  height: 436px;
+  display: flex;
+  justify-content: space-between;
+  background: url(/public/payment/paymentCover01.png) no-repeat right 30px bottom 10px / contain;
+  background-size: 40%;
+  background-color: #f4f6fb;
+  border-radius: 10px;
+  margin-bottom: 30px;
+
+  & h2 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    & strong {
+      color: #0080ff;
+    }
+  }
+  & h2:first-child {
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+}
+.payment .paymentCover > div > a {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  margin-top: 20px;
+}
+.paymentBanner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: #4a8ff5;
+  max-height: 62px;
+  border-radius: 10px;
+  color: white;
+  margin-bottom: 80px;
+}
+.paymentBanner::after {
+  content: "";
+  display: inline-block;
+  width: 222px;
+  height: 78px;
+  background: url(/public/payment/paymentCover02.png);
+  margin: 0 0 20px 10px;
+}
+.paymentStickyWrap {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+.payment .button-container {
+  position: sticky;
+  top: 162px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: auto;
+  color: #fff;
+  z-index: 1000;
+}
+
+.scroll-button {
+  flex-grow: 1;
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+  border: none;
+  height: 46px;
+  background-color: white;
+}
+.scroll-button:hover {
+  background-color: #eee;
+}
+.scroll-button.active {
+  color: #111;
+  border-bottom: 3px solid #111;
+}
+
+.paymentScroll-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.5s ease;
+}
+
+.section {
+  min-width: 100%;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+}
+
+.section1 {
+  width: 100%;
+  padding: 44px 0 50px;
+  & h3 {
+    font-size: 22px;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 16px;
+    li a {
+      display: block;
+      font-size: 16px;
+      padding: 5px 19px;
+      border: 1px solid var(--color-lineLightGray);
+      border-radius: 20px;
+    }
+    li strong {
+      color: #2e81f8;
+    }
+  }
+}
+/* .section1 ul li a {
+  display: block;
+} */
+
+.section2 {
+  word-break: keep-all;
+}
+.section2 .section2Header {
+  display: flex;
+  padding-bottom: 10px;
+  justify-content: space-between;
+  h3 {
+    font-size: 22px;
+    font-weight: 600;
+  }
+  a {
+    display: block;
+    font-size: 18px;
+  }
+}
+
+.section2 .section2Header a::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(/public/payment/arrowSide.png) no-repeat center/cover;
+  transform: translateY(3px);
+  margin-left: 4px;
+}
+.section2 .section2Body {
+  /* ul */
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  text-align: center;
+}
+.hidden-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  max-width: 936px;
+}
+.section2 .section2Body li,
+.hidden-content li {
+  display: flex;
+  flex-direction: column;
+  padding: 41px 10px 18px;
+  width: 33.3%;
+  & img {
+    width: 64px;
+  }
+  h4 {
+    font-size: 20px;
+    padding-top: 14px;
+  }
+  p {
+    font-size: 16px;
+    color: #7b7e86;
+    padding-top: 4px;
+    text-align: center;
+  }
+}
+.section2 .section2Body li a,
+.hidden-content li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+.section2 .section2Body li:last-child {
+  margin-bottom: 60px;
+}
+.show-content-button {
+  font-size: 20px;
+  border: none;
+  background: none;
+  font-weight: 600;
+  color: #9b9fa8;
+  margin: 0 auto;
+  padding: 30px 0 60px;
+  & span {
+    color: #111;
+  }
+}
+.show-content-button::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 12px;
+  background: url(/public/payment/showmore.png) no-repeat center/cover;
+  margin-left: 4px;
+}
+.sectionBottomLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 88px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 #ccc;
+  padding: 0 20px;
+  margin: 0 10px;
+}
+.sectionBottomLink::before {
+  content: "";
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  background: url(/public/payment/ico_tip_banner_04_all_3.png) center/cover;
+  margin-right: 10px;
+}
+
+.section3Header h3,
+.section4Header h3,
+.section5Header h3,
+.section6Header h3 {
+  font-size: 22px;
+  font-weight: 600;
+}
+.section3 .section3Body,
+.section4 .section4Body,
+.section2Hidden-content,
+.section5 .section5Body,
+.section6 .section6Body {
+  display: flex;
+  flex-wrap: wrap;
+}
+.section3 .section3Body li,
+.section4 .section4Body li,
+.section5 .section5Body li,
+.section6 .section6Body li {
+  display: flex;
+  width: 50%;
+  min-width: 230px;
+  min-height: 113px;
+  padding: 30px 0 18px;
+
+  img {
+    width: 32px;
+    height: 32px;
+    margin-right: 20px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 16px;
+    color: #7b7e86;
+    padding-top: 10px;
+  }
+}
+.section3 .section3Body li:hover,
+.section4 .section4Body li:hover,
+.section5 .section5Body li:hover,
+.section6 .section6Body li:hover {
+  color: #7b7e86;
+}
+.section3 .section3Body li a,
+.section4 .section4Body li a,
+.section5 .section5Body li a,
+.section6 .section6Body li a {
+  display: flex;
+}
+.section2Hidden-content {
+  display: flex;
+  flex-grow: 1;
+}
+
+.section3 .show-content-button,
+.section5 .show-content-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section3 .show-content-button::after,
+.section5 .show-content-button::after {
+  display: none;
+}
+.section3 .show-content-button::before,
+.section5 .show-content-button::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  background: url(/public/payment/plusBtn.png) center/contain;
+}
+.section3 .sectionBottomLink::before,
+.section5 .sectionBottomLink::before {
+  background-image: url(/public/payment/ico_tip_banner_04_on_3.png);
+}
+.section4 .show-content-button /* .show-content-button */ {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section4 .section2Hidden-content {
+  margin-bottom: 60px;
+}
+.section6 {
+  border-bottom: none;
+}
+@media (max-width: 640px) {
+  .section2 .section2Body li {
+    width: 50%;
+  }
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  background: white;
+  z-index: 99999999999 !important;
+  box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  .modal {
+    width: 100%; /* or a specific value */
+    height: 100%; /* Adjust height as needed */
+    top: 0;
+    left: 0;
+  }
+}
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  padding: 20px 0 30px;
+}
+
+.modal-header span {
+  flex-grow: 1; /* Ensure the span takes up remaining space */
+  margin-right: auto; /* Ensure space between span and button */
+}
+
+.modal-header .close-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.modal-header .close-button img {
+  width: 20px; /* Adjust size as needed */
+  height: 20px;
+}

@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import "./css/payment.css";
 import { useEffect, useRef, useState } from "react";
-import ShowAll from "./ShowAll";
 
 export default function Payment() {
   const [currentTab, setCurrentTab] = useState("scrollTap01");
@@ -33,8 +32,8 @@ export default function Payment() {
 
   //이하 모달창생성소스
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const modalRef = useRef(null);
-  const dragRef = useRef({ isDragging: false, x: 0, y: 0 });
+  const modalRef = useRef(null); // 모달 요소에 대한 참조
+  const dragRef = useRef({ isDragging: false, x: 0, y: 0 }); // 드래그 상태를 저장하는 객체
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -46,12 +45,9 @@ export default function Payment() {
 
   useEffect(() => {
     if (isModalOpen) {
-      document.body.style.overflow = "hidden";
       const modal = modalRef.current;
       modal.style.left = `${window.scrollX + window.innerWidth / 2 - modal.offsetWidth / 2}px`;
       modal.style.top = `${window.scrollY + window.innerHeight / 2 - modal.offsetHeight / 2}px`;
-    } else {
-      document.body.style.overflow = "auto";
     }
   }, [isModalOpen]);
 
@@ -179,42 +175,30 @@ export default function Payment() {
               </div>
               <ul className="section2Body">
                 <li>
-                  <Link to="#">
-                    <img src="/payment/ico_mrc_grp_2.png" alt="" />
-                    <h4>아파트 관리비</h4>
-                  </Link>
+                  <img src="/payment/ico_mrc_grp_2.png" alt="" />
+                  <h4>아파트 관리비</h4>
                 </li>
                 <li>
-                  <Link to="#">
-                    <img src="/payment/ico_mrc_grp_4.png" alt="" />
-                    <h4>전화요금</h4>
-                    <p>휴대전화, 유선전화</p>
-                  </Link>
+                  <img src="/payment/ico_mrc_grp_4.png" alt="" />
+                  <h4>전화요금</h4>
+                  <p>휴대전화, 유선전화</p>
                 </li>
                 <li>
-                  <Link to="#">
-                    <img src="/payment/ico_mrc_grp_1.png" alt="" />
-                    <h4>도시가스요금</h4>
-                  </Link>
+                  <img src="/payment/ico_mrc_grp_1.png" alt="" />
+                  <h4>도시가스요금</h4>
                 </li>
                 <li>
-                  <Link to="#">
-                    <img src="/payment/ico_mrc_grp_5.png" alt="" />
-                    <h4>4대 사회보험</h4>
-                    <p>국민연금, 건강보험, 고용보험, 산재보험</p>
-                  </Link>
+                  <img src="/payment/ico_mrc_grp_5.png" alt="" />
+                  <h4>4대 사회보험</h4>
+                  <p>국민연금, 건강보험, 고용보험, 산재보험</p>
                 </li>
                 <li>
-                  <Link to="#">
-                    <img src="/payment/ico_mrc_grp_3.png" alt="" />
-                    <h4>전기요금</h4>
-                  </Link>
+                  <img src="/payment/ico_mrc_grp_3.png" alt="" />
+                  <h4>전기요금</h4>
                 </li>
                 <li>
-                  <Link to="#">
-                    <img src="/payment/ico_mrc_grp_91.png" alt="" />
-                    <h4>유치원 납입금</h4>
-                  </Link>
+                  <img src="/payment/ico_mrc_grp_6.png" alt="" />
+                  <h4>유치원 납입금</h4>
                 </li>
                 {!isContentVisible && (
                   <button onClick={handleShowContent} className="show-content-button">
@@ -224,29 +208,21 @@ export default function Payment() {
                 {isContentVisible && (
                   <ul className="hidden-content">
                     <li>
-                      <Link to="#">
-                        <img src="/payment/ico_mrc_grp_7.png" alt="" />
-                        <h4>초중고 학교납입금</h4>
-                      </Link>
+                      <img src="/payment/ico_mrc_grp_7.png" alt="" />
+                      <h4>초중고 학교납입금</h4>
                     </li>
                     <li>
-                      <Link to="#">
-                        <img src="/payment/ico_mrc_grp_8.png" alt="" />
-                        <h4>지방세입 모바일 고지서</h4>
-                        <p>고지서 알림받고 세액 공제까지</p>
-                      </Link>
+                      <img src="/payment/ico_mrc_grp_8.png" alt="" />
+                      <h4>지방세입 모바일 고지서</h4>
+                      <p>고지서 알림받고 세액 공제까지</p>
                     </li>
                     <li>
-                      <Link to="#">
-                        <img src="/payment/ico_mrc_grp_6.png" alt="" />
-                        <h4>국세/지방세</h4>
-                      </Link>
+                      <img src="/payment/ico_mrc_grp_9.png" alt="" />
+                      <h4>국세/지방세</h4>
                     </li>
                     <li>
-                      <Link to="#">
-                        <img src="/payment/ico_mrc_grp_10.png" alt="" />
-                        <h4>대학등록금</h4>
-                      </Link>
+                      <img src="/payment/ico_mrc_grp_10.png" alt="" />
+                      <h4>대학등록금</h4>
                     </li>
                   </ul>
                 )}
@@ -261,71 +237,64 @@ export default function Payment() {
               </div>
               <ul className="section3Body">
                 <li>
-                  <Link to="#">
-                    <img src="/payment/ico_mrc_grp_25.png" alt="" />
-                    <h4>넷플릭스</h4>
-                  </Link>
+                  <img src="/payment/ico_mrc_grp_25.png" alt="" />
+                  <h4>넷플릭스</h4>
                 </li>
                 <li>
-                  <Link to="#">
-                    <img src="/payment/ico_mrc_grp_31.png" alt="" />
-                    <div>
-                      <h4>유튜브 프리미엄</h4>
-                      <p>광고 없는 YouTube</p>
-                    </div>
-                  </Link>
+                  <img src="/payment/ico_mrc_grp_31.png" alt="" />
+                  <div>
+                    <h4>유튜브 프리미엄</h4>
+                    <p>광고 없는 YouTube</p>
+                  </div>
                 </li>
                 <li>
-                  <Link to="#">
-                    <img src="/payment/ico_mrc_grp_36.png" alt="" />
-                    <h4>마켓컬리 컬리패스</h4>
-                  </Link>
+                  <img src="/payment/ico_mrc_grp_36.png" alt="" />
+                  <h4>마켓컬리 컬리패스</h4>
                 </li>
                 <li>
-                  <Link to="#">
-                    <img src="/payment/ico_mrc_grp_56.png" alt="" />
-                    <h4>티빙</h4>
-                  </Link>
+                  <img src="/payment/ico_mrc_grp_56.png" alt="" />
+                  <h4>티빙</h4>
                 </li>
                 <li>
-                  <Link to="#">
-                    <img src="/payment/ico_mrc_grp_26.png" alt="" />
-                    <h4>티빙</h4>
-                  </Link>
+                  <img src="/payment/ico_mrc_grp_26.png" alt="" />
+                  <h4>티빙</h4>
                 </li>
                 <li>
-                  <Link to="#">
-                    <img src="/payment/ico_mrc_grp_29.png" alt="" />
-                    <h4>웨이브</h4>
-                  </Link>
+                  <img src="/payment/ico_mrc_grp_29.png" alt="" />
+                  <h4>웨이브</h4>
                 </li>
               </ul>
               {/* 모달시작 */}
               <div>
-                <button onClick={openModal} className="show-content-button">
-                  전체보기
-                </button>
+                <button onClick={openModal}>모달 열기</button>
                 {isModalOpen && (
                   <div
                     className="modal"
                     ref={modalRef}
-                    // style={{
-                    //   overflow: "hidden",
-                    //   transform: "none",
-                    // }}
+                    style={{
+                      position: "absolute",
+                      transform: "none", // 이 부분 수정
+                    }}
                   >
-                    <div className="modalwrap">
-                      <div className="modal-header" onMouseDown={onMouseDown}>
-                        <span>
-                          <strong>구독</strong> 전체보기
-                        </span>
-                        <button onClick={closeModal} className="close-button">
-                          <img src="/payment/closeBtn.png" alt="close" />
-                        </button>
-                      </div>
-                      <div className="modal-content">
-                        <ShowAll />
-                      </div>
+                    <div className="modal-header" onMouseDown={onMouseDown}>
+                      <span>모달 제목</span>
+                      <button onClick={closeModal} className="close-button">
+                        X
+                      </button>
+                    </div>
+                    <div className="modal-content">
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, rerum
+                        officia optio et autem enim eveniet consequuntur fuga fugiat id nemo
+                        voluptate exercitationem magnam assumenda animi sit dolore quia rem dolor
+                        voluptas, laborum hic eos ipsa. Quo dignissimos aliquam cum iure odit quas
+                        excepturi qui commodi mollitia? Alias quaerat sint id et! Nisi vero aperiam
+                        minima est. Perferendis vel, maiores repudiandae, asperiores corporis
+                        tempore tenetur voluptatum sint placeat illum non obcaecati. Laborum nostrum
+                        provident dicta quod sit eos. Ut perferendis odit sapiente labore expedita
+                        nam, adipisci veritatis voluptatibus porro fugit alias officia
+                        exercitationem? Ipsum vel ea architecto ab ex mollitia?
+                      </p>
                     </div>
                   </div>
                 )}
@@ -341,58 +310,46 @@ export default function Payment() {
               </div>
               <ul className="section4Body">
                 <li>
-                  <Link to="#">
-                    <img src="/payment/ico_mrc_grp_52.png" alt="" />
-                    <div>
-                      <h4>금융안심보상</h4>
-                      <p>신용등급 확인, 금융사기 피해 보상</p>
-                    </div>
-                  </Link>
+                  <img src="/payment/ico_mrc_grp_52.png" alt="" />
+                  <div>
+                    <h4>금융안심보상</h4>
+                    <p>신용등급 확인, 금융사기 피해 보상</p>
+                  </div>
                 </li>
                 <li>
-                  <Link to="#">
-                    <img src="/payment/ico_mrc_grp_51.png" alt="" />
-                    <div>
-                      <h4>명의보호알림</h4>
-                      <p>본인/실명 인증 발생 시 실시간 알림</p>
-                    </div>
-                  </Link>
+                  <img src="/payment/ico_mrc_grp_51.png" alt="" />
+                  <div>
+                    <h4>명의보호알림</h4>
+                    <p>본인/실명 인증 발생 시 실시간 알림</p>
+                  </div>
                 </li>
                 <li>
-                  <Link to="#">
-                    <img src="/payment/ico_mrc_grp_49.png" alt="" />
-                    <div>
-                      <h4>휴대폰알림</h4>
-                      <p>결제내역과 잔여한도, 신용변동 알림</p>
-                    </div>
-                  </Link>
+                  <img src="/payment/ico_mrc_grp_49.png" alt="" />
+                  <div>
+                    <h4>휴대폰알림</h4>
+                    <p>결제내역과 잔여한도, 신용변동 알림</p>
+                  </div>
                 </li>
                 <li>
-                  <Link to="#">
-                    <img src="/payment/ico_mrc_grp_50.png" alt="" />
-                    <div>
-                      <h4>바로알림</h4>
-                      <p>카드 쓸 때마다 결제내역 바로 알림</p>
-                    </div>
-                  </Link>
+                  <img src="/payment/ico_mrc_grp_50.png" alt="" />
+                  <div>
+                    <h4>바로알림</h4>
+                    <p>카드 쓸 때마다 결제내역 바로 알림</p>
+                  </div>
                 </li>
                 <li>
-                  <Link to="#">
-                    <img src="/payment/ico_mrc_grp_54.png" alt="" />
-                    <div>
-                      <h4>종합정보 보호상품</h4>
-                      <p>금융 사기 및 명의 도용 피해 예방</p>
-                    </div>
-                  </Link>
+                  <img src="/payment/ico_mrc_grp_54.png" alt="" />
+                  <div>
+                    <h4>종합정보 보호상품</h4>
+                    <p>금융 사기 및 명의 도용 피해 예방</p>
+                  </div>
                 </li>
                 <li>
-                  <Link to="#">
-                    <img src="/payment/ico_mrc_grp_53.png" alt="" />
-                    <div>
-                      <h4>명의도용차단 서비스</h4>
-                      <p>실명 확인 즉시 알림</p>
-                    </div>
-                  </Link>
+                  <img src="/payment/ico_mrc_grp_53.png" alt="" />
+                  <div>
+                    <h4>명의도용차단 서비스</h4>
+                    <p>실명 확인 즉시 알림</p>
+                  </div>
                 </li>
                 {!isContentVisible02 && (
                   <button onClick={handleShowContent02} className="show-content-button">
@@ -402,22 +359,18 @@ export default function Payment() {
                 {isContentVisible02 && (
                   <ul className="section2Hidden-content">
                     <li>
-                      <Link to="#">
-                        <img src="/payment/ico_mrc_grp_55.png" alt="" />
-                        <div>
-                          <h4>세이프케어상품</h4>
-                          <p>위급 상황 시 골든타임 확보 가능</p>
-                        </div>
-                      </Link>
+                      <img src="/payment/ico_mrc_grp_55.png" alt="" />
+                      <div>
+                        <h4>세이프케어상품</h4>
+                        <p>위급 상황 시 골든타임 확보 가능</p>
+                      </div>
                     </li>
                     <li>
-                      <Link to="#">
-                        <img src="/payment/ico_mrc_grp_80.png" alt="" />
-                        <div>
-                          <h4>채무면제/유예상품</h4>
-                          <p>카드 대금 면제 또는 결제 연기</p>
-                        </div>
-                      </Link>
+                      <img src="/payment/ico_mrc_grp_80.png" alt="" />
+                      <div>
+                        <h4>채무면제/유예상품</h4>
+                        <p>카드 대금 면제 또는 결제 연기</p>
+                      </div>
                     </li>
                   </ul>
                 )}
@@ -433,30 +386,22 @@ export default function Payment() {
               </div>
               <ul className="section5Body">
                 <li>
-                  <Link to="#">
-                    <img src="/payment/ico_mrc_grp_00.png" alt="" />
-                    <h4>라이나생명</h4>
-                  </Link>
+                  <img src="/payment/ico_mrc_grp_00.png" alt="" />
+                  <h4>라이나생명</h4>
                 </li>
                 <li>
-                  <Link to="#">
-                    <img src="/payment/ico_mrc_grp_62.png" alt="" />
-                    <div>
-                      <h4>AIA생명</h4>
-                    </div>
-                  </Link>
+                  <img src="/payment/ico_mrc_grp_62.png" alt="" />
+                  <div>
+                    <h4>AIA생명</h4>
+                  </div>
                 </li>
                 <li>
-                  <Link to="#">
-                    <img src="/payment/ico_mrc_grp_70.png" alt="" />
-                    <h4>삼성화재</h4>
-                  </Link>
+                  <img src="/payment/ico_mrc_grp_70.png" alt="" />
+                  <h4>삼성화재</h4>
                 </li>
                 <li>
-                  <Link to="#">
-                    <img src="/payment/ico_mrc_grp_71.png" alt="" />
-                    <h4>DB손해보험</h4>
-                  </Link>
+                  <img src="/payment/ico_mrc_grp_71.png" alt="" />
+                  <h4>DB손해보험</h4>
                 </li>
               </ul>
               <div>
@@ -472,10 +417,8 @@ export default function Payment() {
               </div>
               <ul className="section6Body">
                 <li>
-                  <Link to="#">
-                    <img src="/payment/ico_peripay_109.png" alt="" />
-                    <h4>간편식 정기쇼핑(BESPOKE 큐커)</h4>
-                  </Link>
+                  <img src="/payment/ico_peripay_109.png" alt="" />
+                  <h4>간편식 정기쇼핑(BESPOKE 큐커)</h4>
                 </li>
               </ul>
             </div>

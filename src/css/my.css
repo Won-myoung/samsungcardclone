@@ -1,0 +1,163 @@
+@import "colorVaration.css";
+
+.myLogin {
+  max-width: 392px;
+  padding: 17px 24px;
+  margin: calc(162px + 100px) auto 176px;
+  /* display: flex;
+  justify-content: space-between; */
+  border-radius: 20px;
+  border: 1px solid var(--color-lineLightGray);
+  box-sizing: border-box;
+}
+
+.myLogin .loginButton {
+  display: flex;
+}
+.myLogin .loginButton button {
+  width: 25%;
+  border: none;
+  background: none;
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--color-lineLightGray);
+}
+.myLogin .loginButton button:hover {
+  background-color: #eee;
+}
+.myLogin .loginButton button.active {
+  border-bottom: 3px solid #333;
+}
+.myLogin .loginTopItem {
+  padding-top: 30px;
+  text-align: center;
+  & img {
+    width: 48px;
+    aspect-ratio: 1/1;
+    margin-bottom: 12px;
+  }
+  & p {
+    font-weight: 700;
+  }
+}
+.myLogin .loginTopItem .loginTopItemVisual {
+  height: 138px;
+}
+.myLogin .loginApp {
+  padding: 0 20px;
+  height: 284px;
+}
+
+.myLogin .loginApp .loginTopItem.loginTapWrap .loginTopItemVisual {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  div {
+    display: flex;
+  }
+  div input {
+    max-width: 326px;
+    flex-grow: 1;
+    /* max-width: 100%; */
+    height: 52px;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 0 20px;
+    border: 1px solid var(--color-lineLightGray);
+  }
+}
+.myLogin .loginApp .loginTopItem.loginTapWrap .loginbox {
+  position: relative;
+}
+.myLogin .loginApp .loginTopItem.loginTapWrap .loginCheckbox {
+  position: absolute;
+  right: 0;
+  padding-right: 10px;
+  margin: auto 0;
+  a {
+    margin-top: 16px;
+    display: flex;
+    gap: 8px;
+    color: #aaa;
+    p {
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+  img {
+    width: 23px;
+    height: 23px;
+    object-fit: cover;
+    object-position: 78%;
+  }
+}
+
+.myLogin .loginBtn {
+  display: block;
+  font-size: 14px;
+  /* width: calc(100% - 20px); */
+  width: 100%;
+  height: 52px;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  border-radius: 10px;
+  background-color: #2090ff;
+}
+.myLogin .loginInfo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--color-lineLightGray);
+  & a {
+    color: #666;
+  }
+}
+.myLogin .loginBottomBtn {
+  display: flex;
+  justify-content: space-between;
+}
+.myLogin.loginBottomBtn li {
+  margin: 0 auto;
+  margin-top: 24px;
+  position: relative;
+  & img {
+    display: block;
+    margin: 0 auto 8px;
+    width: 24px;
+  }
+}
+.myLogin .loginBottomBtn li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 12px;
+  background: #e2e5db;
+  bottom: 4px;
+  right: -19px;
+}
+
+.myLogin .safeProgram {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+  font-size: 14px;
+  font-weight: 500;
+  & p {
+    padding: 0 5px;
+  }
+}
+
+.myLogin .safeProgram p:first-child::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 12px;
+  background-color: #e2e5db;
+  margin-left: 10px;
+}
