@@ -7,9 +7,7 @@ img {
 
 .section {
   width: 100%;
-  /* height: 100vh; */
   height: auto;
-  /* border: 2px solid red; */
   border-bottom: 1px solid var(--color-lineLightGray);
   padding: 50px 0;
 }
@@ -17,7 +15,7 @@ img {
 .payment {
   max-width: 1016px;
   padding: 0 20px;
-  margin: calc(162px + 100px) auto 50px;
+  margin: calc(162px + 50px) auto 50px;
   box-sizing: border-box;
 }
 .paymentCover {
@@ -147,9 +145,6 @@ img {
     }
   }
 }
-/* .section1 ul li a {
-  display: block;
-} */
 
 .section2 {
   word-break: keep-all;
@@ -178,10 +173,8 @@ img {
   margin-left: 4px;
 }
 .section2 .section2Body {
-  /* ul */
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: space-between; */
   text-align: center;
 }
 .hidden-content {
@@ -340,7 +333,7 @@ img {
 .section5 .sectionBottomLink::before {
   background-image: url(/public/payment/ico_tip_banner_04_on_3.png);
 }
-.section4 .show-content-button /* .show-content-button */ {
+.section4 .show-content-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -351,40 +344,36 @@ img {
 .section6 {
   border-bottom: none;
 }
-@media (max-width: 640px) {
-  .section2 .section2Body li {
-    width: 50%;
-  }
+.modalWrapper {
+  /* position: relative; */
 }
-
 .modal {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: absolute;
   inset: 0;
+  z-index: 99999999999 !important;
+
   width: 100vw;
   height: 100vh;
   overflow-y: auto;
   background: white;
-  z-index: 99999999999 !important;
   box-sizing: border-box;
 }
-
-@media (max-width: 900px) {
-  .modal {
-    width: 100%; /* or a specific value */
-    height: 100%; /* Adjust height as needed */
-    top: 0;
-    left: 0;
-  }
-}
 .modal-header {
-  display: flex;
+  /* display: flex; */
+  position: sticky;
+  top: 0;
   justify-content: space-between;
   align-items: center;
   font-size: 20px;
-  padding: 20px 0 30px;
+  padding: 20px 0 0;
+  background-color: white;
+  /* border: 2px solid blue; */
+  & .header-title {
+    display: flex;
+  }
 }
 
 .modal-header span {
@@ -402,4 +391,10 @@ img {
 .modal-header .close-button img {
   width: 20px; /* Adjust size as needed */
   height: 20px;
+}
+
+@media (max-width: 640px) {
+  .section2 .section2Body li {
+    width: 50%;
+  }
 }

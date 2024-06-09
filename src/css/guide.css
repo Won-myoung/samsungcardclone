@@ -1,7 +1,7 @@
 @import "colorVaration.css";
 
 .guide {
-  padding-top: calc(162px + 100px);
+  padding-top: calc(162px + 50px);
   max-width: 1224px;
   margin: 0 auto;
 }

@@ -1,7 +1,16 @@
 import { Link } from "react-router-dom";
 import "./css/payment.css";
+import "./css/showall.css";
 import { useEffect, useRef, useState } from "react";
-import ShowAll from "./ShowAll";
+// import ShowAll from "./ShowAll.jsx";
+import ShowAll01 from "./showAllList/ShowAll01";
+import ShowAll02 from "./showAllList/ShowAll02";
+import ShowAll03 from "./showAllList/ShowAll03";
+import ShowAll04 from "./showAllList/ShowAll04";
+import ShowAll05 from "./showAllList/ShowAll05";
+import ShowAll06 from "./showAllList/ShowAll06";
+import ShowAll07 from "./showAllList/ShowAll07";
+import ShowAll08 from "./showAllList/ShowAll08";
 
 export default function Payment() {
   const [currentTab, setCurrentTab] = useState("scrollTap01");
@@ -73,6 +82,12 @@ export default function Payment() {
     dragRef.current.isDragging = false;
     document.removeEventListener("mousemove", onMouseMove);
     document.removeEventListener("mouseup", onMouseUp);
+  };
+
+  /* 모달창 버튼 */
+  const [currentTab02, setCurrentTab02] = useState("showAll01");
+  const handleButtonClick02 = (tab) => {
+    setCurrentTab02(tab);
   };
   return (
     <div className="payment">
@@ -301,7 +316,7 @@ export default function Payment() {
                 </li>
               </ul>
               {/* 모달시작 */}
-              <div>
+              <div className="modalWrapper">
                 <button onClick={openModal} className="show-content-button">
                   전체보기
                 </button>
@@ -315,16 +330,81 @@ export default function Payment() {
                     // }}
                   >
                     <div className="modalwrap">
-                      <div className="modal-header" onMouseDown={onMouseDown}>
-                        <span>
-                          <strong>구독</strong> 전체보기
-                        </span>
-                        <button onClick={closeModal} className="close-button">
-                          <img src="/payment/closeBtn.png" alt="close" />
-                        </button>
+                      <div className="modal-header" /* onMouseDown={onMouseDown} */>
+                        <div className="header-title">
+                          <span>
+                            <strong>구독</strong> 전체보기
+                          </span>
+                          <button onClick={closeModal} className="close-button">
+                            <img src="/payment/closeBtn.png" alt="close" />
+                          </button>
+                        </div>
+                        <div>
+                          <div className="showAllButton">
+                            <button
+                              onClick={() => handleButtonClick02("showAll01")}
+                              className={currentTab02 === "showAll01" ? "active" : ""}
+                            >
+                              All
+                            </button>
+                            <button
+                              onClick={() => handleButtonClick02("showAll02")}
+                              className={currentTab02 === "showAll02" ? "active" : ""}
+                            >
+                              VOD/음원
+                            </button>
+                            <button
+                              onClick={() => handleButtonClick02("showAll03")}
+                              className={currentTab02 === "showAll03" ? "active" : ""}
+                            >
+                              정기배송
+                            </button>
+                            <button
+                              onClick={() => handleButtonClick02("showAll04")}
+                              className={currentTab02 === "showAll04" ? "active" : ""}
+                            >
+                              렌탈
+                            </button>
+                            <button
+                              onClick={() => handleButtonClick02("showAll05")}
+                              className={currentTab02 === "showAll05" ? "active" : ""}
+                            >
+                              교육/학습지
+                            </button>
+                            <button
+                              onClick={() => handleButtonClick02("showAll06")}
+                              className={currentTab02 === "showAll06" ? "active" : ""}
+                            >
+                              문화/컬처
+                            </button>
+                            <button
+                              onClick={() => handleButtonClick02("showAll07")}
+                              className={currentTab02 === "showAll07" ? "active" : ""}
+                            >
+                              케어/멤버십
+                            </button>
+                            <button
+                              onClick={() => handleButtonClick02("showAll08")}
+                              className={currentTab02 === "showAll08" ? "active" : ""}
+                            >
+                              식음료
+                            </button>
+                          </div>
+                        </div>
                       </div>
                       <div className="modal-content">
-                        <ShowAll />
+                        <div className="showAll">
+                          <div className="showAllBody">
+                            {currentTab02 === "showAll01" && <ShowAll01 />}
+                            {currentTab02 === "showAll02" && <ShowAll02 />}
+                            {currentTab02 === "showAll03" && <ShowAll03 />}
+                            {currentTab02 === "showAll04" && <ShowAll04 />}
+                            {currentTab02 === "showAll05" && <ShowAll05 />}
+                            {currentTab02 === "showAll06" && <ShowAll06 />}
+                            {currentTab02 === "showAll07" && <ShowAll07 />}
+                            {currentTab02 === "showAll08" && <ShowAll08 />}
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
