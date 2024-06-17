@@ -1,0 +1,181 @@
+@import "colorVaration.css";
+* {
+  letter-spacing: -0.1px;
+}
+.HMModal-content {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin-top: 160px;
+}
+.HMModalWrapper {
+}
+.HMModalWrapper .HMModal {
+  position: fixed;
+  margin-top: 160px;
+  inset: 0;
+  top: 0;
+  max-width: 1268px;
+  margin: 160px auto 0;
+}
+
+.HMModalWrapper button {
+  border: none;
+  background: none;
+}
+.HMModalWrapper button img {
+  width: 20px;
+  height: 20px;
+}
+/* components */
+
+.menuList {
+  display: grid;
+  grid-template-columns: 27fr 69fr 30fr;
+  max-width: 1268px;
+  margin: 0 auto 0;
+}
+.menuListLeft {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* height: 100vh; */
+  background-color: #f3f5f8;
+  padding-top: 40px;
+  > button {
+    height: 62px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    text-align: left;
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #111;
+    transition: all 0.3s;
+  }
+  > button.active {
+    background-color: #2e81f8;
+    color: white;
+    font-weight: 600;
+  }
+}
+
+.menuListRight {
+  background-color: white;
+  font-size: 18px;
+  padding: 24px;
+  width: 100%;
+}
+.menuListRight > div {
+  display: none;
+}
+.menuListRight > div.show {
+  display: block;
+}
+
+.boldClass {
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.closeList.boldClass > ul > li {
+  font-weight: normal;
+  margin-top: 8px;
+  /* display: none; */
+}
+.closeList.boldClass > ul > li.active {
+  display: block;
+}
+.mainMenu {
+  border-bottom: 2px solid var(--color-lineLightGray);
+  padding-bottom: 10px;
+}
+.mainMenu > img {
+  width: 30px;
+  height: 30px;
+  aspect-ratio: 1/1;
+}
+
+.arrowIcon {
+  float: right;
+  padding: 0;
+}
+
+.menuListRight .subMenu li {
+  font-size: 16px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s;
+}
+.menuListRight .subMenu li a:hover {
+  color: var(--color-2e81f8);
+}
+
+.menuListRight > div > ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 30px;
+}
+@media (max-width: 900px) {
+  .menuListRight > div > ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.menuLast {
+  font-size: 16px;
+  padding: 65px 20px;
+  background-color: #f3f5f8;
+  display: flex;
+  flex-direction: column;
+}
+.menuLast ul {
+  font-weight: 600;
+}
+.menuLast li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 400;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--color-lineLightGray);
+}
+.menuLast li a {
+  color: #444;
+  font-weight: 500;
+}
+.menuLast li a:hover {
+  font-weight: bold;
+  color: var(--color-2e81f8);
+  font-weight: 600;
+}
+.menuLast li::after {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 12px;
+  background: url(/public/arrowRight.png) no-repeat center/cover;
+}
+.menuLast img {
+  display: block;
+  width: 155px;
+  margin: 100px auto 0;
+}
+/* .menuListRight .mainMenu img {
+  display: none;
+}
+ */
+.submenuArrow::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background: url(/public/arrowSet.png) no-repeat;
+  background-position: 0 -351px;
+
+  margin-left: 4px;
+}

@@ -10,6 +10,7 @@
   max-width: 1224px;
   height: 162px;
   background-color: white;
+  background-color: rgba(255, 255, 255, 0.8);
   /* opacity: 0.5; */
   padding: 0 20px;
   box-sizing: border-box;
@@ -81,14 +82,25 @@
 }
 .topMenuBurger {
   background: url(/public/mainIcon02.png) no-repeat center/cover;
+  border: none;
 }
 
 @media (max-width: 900px) {
-  .topMenuWrapper .topMenuCenter {
-    font-size: 16px;
-    padding: 0 30px;
-    max-width: 400px;
+  .headerWrapper {
+    height: 90px;
   }
   .topMenuWrapper .topMenuCenter {
+    display: none;
+  }
+
+  .header .miniMenuWrapper {
+    display: none;
+  }
+  .topMenuWrapper {
+    padding-top: 30px;
+  }
+  .header {
+    border-bottom: none;
+    height: 90px;
   }
 }

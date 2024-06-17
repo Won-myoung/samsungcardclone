@@ -2,7 +2,7 @@
 
 .Mainpage {
   max-width: 1224px;
-  padding-top: calc(162px + 100px);
+  padding: calc(162px + 100px) 20px 0;
   margin: 0 auto;
   word-break: normal;
   box-sizing: border-box;
@@ -133,12 +133,7 @@
     border: 1px solid var(--color-lineLightGray);
   }
 }
-.Mainpage
-  .mainpageLogin
-  .loginApp
-  .loginTopItem.loginTapWrap
-  .loginTopItemVisual
-  .loginbox:first-child {
+.Mainpage .mainpageLogin .loginApp .loginTopItem.loginTapWrap .loginTopItemVisual .loginbox:first-child {
   margin-bottom: 15px;
 }
 .Mainpage .mainpageLogin .loginApp .loginTopItem.loginTapWrap .loginbox {
@@ -645,6 +640,8 @@
 @media (max-width: 900px) {
   .Mainpage {
     width: 100%;
+    padding: 100px 20px 0;
+    border: 2px solid red;
   }
   .Mainpage .mainCover {
     display: flex;
@@ -658,14 +655,19 @@
   .Mainpage .mainpageLogin {
     display: none;
   }
-}
-@media (max-width: 900px) {
+  .Mainpage .mySwiper {
+    padding: 0;
+  }
+  .Mainpage .swiper-button-next,
+  .Mainpage .swiper-button-prev {
+    display: none;
+  }
+
   .Mainpage .mainFinanceShopping {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
-}
-@media (max-width: 900px) {
+
   .mainEventsWrap {
     display: flex;
     flex-wrap: wrap;

@@ -51,12 +51,12 @@ export default function Mainpage() {
             <SwiperSlide>
               <div className="mainSwiperList">
                 <div className="textWrap">
-                  <p class="big">
+                  <p className="big">
                     월 최대&nbsp;3만원 할인!
                     <br />
                     모니모카드&nbsp;혜택
                   </p>
-                  <p class="small">
+                  <p className="small">
                     편의점,&nbsp;온라인쇼핑몰 등<br />
                     필요한 혜택만 모두&nbsp;모았어요!
                   </p>
@@ -67,12 +67,12 @@ export default function Mainpage() {
             <SwiperSlide>
               <div className="mainSwiperList">
                 <div className="textWrap">
-                  <p class="big">
+                  <p className="big">
                     월 최대&nbsp;3만원 할인!
                     <br />
                     모니모카드&nbsp;혜택
                   </p>
-                  <p class="small">
+                  <p className="small">
                     편의점,&nbsp;온라인쇼핑몰 등<br />
                     필요한 혜택만 모두&nbsp;모았어요!
                   </p>
@@ -83,12 +83,12 @@ export default function Mainpage() {
             <SwiperSlide>
               <div className="mainSwiperList">
                 <div className="textWrap">
-                  <p class="big">
+                  <p className="big">
                     월 최대&nbsp;3만원 할인!
                     <br />
                     모니모카드&nbsp;혜택
                   </p>
-                  <p class="small">
+                  <p className="small">
                     편의점,&nbsp;온라인쇼핑몰 등<br />
                     필요한 혜택만 모두&nbsp;모았어요!
                   </p>
@@ -99,12 +99,12 @@ export default function Mainpage() {
             <SwiperSlide>
               <div className="mainSwiperList">
                 <div className="textWrap">
-                  <p class="big">
+                  <p className="big">
                     월 최대&nbsp;3만원 할인!
                     <br />
                     모니모카드&nbsp;혜택
                   </p>
-                  <p class="small">
+                  <p className="small">
                     편의점,&nbsp;온라인쇼핑몰 등<br />
                     필요한 혜택만 모두&nbsp;모았어요!
                   </p>
@@ -115,12 +115,12 @@ export default function Mainpage() {
             <SwiperSlide>
               <div className="mainSwiperList">
                 <div className="textWrap">
-                  <p class="big">
+                  <p className="big">
                     월 최대&nbsp;3만원 할인!
                     <br />
                     모니모카드&nbsp;혜택
                   </p>
-                  <p class="small">
+                  <p className="small">
                     편의점,&nbsp;온라인쇼핑몰 등<br />
                     필요한 혜택만 모두&nbsp;모았어요!
                   </p>
@@ -131,12 +131,12 @@ export default function Mainpage() {
             <SwiperSlide>
               <div className="mainSwiperList">
                 <div className="textWrap">
-                  <p class="big">
+                  <p className="big">
                     월 최대&nbsp;3만원 할인!
                     <br />
                     모니모카드&nbsp;혜택
                   </p>
-                  <p class="small">
+                  <p className="small">
                     편의점,&nbsp;온라인쇼핑몰 등<br />
                     필요한 혜택만 모두&nbsp;모았어요!
                   </p>
@@ -147,12 +147,12 @@ export default function Mainpage() {
             <SwiperSlide>
               <div className="mainSwiperList">
                 <div className="textWrap">
-                  <p class="big">
+                  <p className="big">
                     월 최대&nbsp;3만원 할인!
                     <br />
                     모니모카드&nbsp;혜택
                   </p>
-                  <p class="small">
+                  <p className="small">
                     편의점,&nbsp;온라인쇼핑몰 등<br />
                     필요한 혜택만 모두&nbsp;모았어요!
                   </p>
@@ -163,12 +163,12 @@ export default function Mainpage() {
             <SwiperSlide>
               <div className="mainSwiperList">
                 <div className="textWrap">
-                  <p class="big">
+                  <p className="big">
                     월 최대&nbsp;3만원 할인!
                     <br />
                     모니모카드&nbsp;혜택
                   </p>
-                  <p class="small">
+                  <p className="small">
                     편의점,&nbsp;온라인쇼핑몰 등<br />
                     필요한 혜택만 모두&nbsp;모았어요!
                   </p>
@@ -179,12 +179,12 @@ export default function Mainpage() {
             <SwiperSlide>
               <div className="mainSwiperList">
                 <div className="textWrap">
-                  <p class="big">
+                  <p className="big">
                     월 최대&nbsp;3만원 할인!
                     <br />
                     모니모카드&nbsp;혜택
                   </p>
-                  <p class="small">
+                  <p className="small">
                     편의점,&nbsp;온라인쇼핑몰 등<br />
                     필요한 혜택만 모두&nbsp;모았어요!
                   </p>
@@ -195,12 +195,12 @@ export default function Mainpage() {
             <SwiperSlide>
               <div className="mainSwiperList">
                 <div className="textWrap">
-                  <p class="big">
+                  <p className="big">
                     월 최대&nbsp;3만원 할인!
                     <br />
                     모니모카드&nbsp;혜택
                   </p>
-                  <p class="small">
+                  <p className="small">
                     편의점,&nbsp;온라인쇼핑몰 등<br />
                     필요한 혜택만 모두&nbsp;모았어요!
                   </p>
@@ -211,12 +211,12 @@ export default function Mainpage() {
             <SwiperSlide>
               <div className="mainSwiperList">
                 <div className="textWrap">
-                  <p class="big">
+                  <p className="big">
                     월 최대&nbsp;3만원 할인!
                     <br />
                     모니모카드&nbsp;혜택
                   </p>
-                  <p class="small">
+                  <p className="small">
                     편의점,&nbsp;온라인쇼핑몰 등<br />
                     필요한 혜택만 모두&nbsp;모았어요!
                   </p>
@@ -227,12 +227,12 @@ export default function Mainpage() {
             <SwiperSlide>
               <div className="mainSwiperList">
                 <div className="textWrap">
-                  <p class="big">
+                  <p className="big">
                     월 최대&nbsp;3만원 할인!
                     <br />
                     모니모카드&nbsp;혜택
                   </p>
-                  <p class="small">
+                  <p className="small">
                     편의점,&nbsp;온라인쇼핑몰 등<br />
                     필요한 혜택만 모두&nbsp;모았어요!
                   </p>
@@ -243,12 +243,12 @@ export default function Mainpage() {
             <SwiperSlide>
               <div className="mainSwiperList">
                 <div className="textWrap">
-                  <p class="big">
+                  <p className="big">
                     월 최대&nbsp;3만원 할인!
                     <br />
                     모니모카드&nbsp;혜택
                   </p>
-                  <p class="small">
+                  <p className="small">
                     편의점,&nbsp;온라인쇼핑몰 등<br />
                     필요한 혜택만 모두&nbsp;모았어요!
                   </p>
@@ -259,12 +259,12 @@ export default function Mainpage() {
             <SwiperSlide>
               <div className="mainSwiperList">
                 <div className="textWrap">
-                  <p class="big">
+                  <p className="big">
                     월 최대&nbsp;3만원 할인!
                     <br />
                     모니모카드&nbsp;혜택
                   </p>
-                  <p class="small">
+                  <p className="small">
                     편의점,&nbsp;온라인쇼핑몰 등<br />
                     필요한 혜택만 모두&nbsp;모았어요!
                   </p>

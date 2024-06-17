@@ -22,8 +22,7 @@ export default function Payment() {
     const headerHeight = 188; // 헤더의 높이
 
     if (section) {
-      const sectionPosition =
-        section.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+      const sectionPosition = section.getBoundingClientRect().top + window.pageYOffset - headerHeight;
       window.scrollTo({ top: sectionPosition, behavior: "smooth" });
     }
   };
@@ -64,7 +63,7 @@ export default function Payment() {
     }
   }, [isModalOpen]);
 
-  const onMouseDown = (e) => {
+  /*   const onMouseDown = (e) => {
     dragRef.current.isDragging = true;
     dragRef.current.x = e.clientX - modalRef.current.offsetLeft;
     dragRef.current.y = e.clientY - modalRef.current.offsetTop;
@@ -82,7 +81,7 @@ export default function Payment() {
     dragRef.current.isDragging = false;
     document.removeEventListener("mousemove", onMouseMove);
     document.removeEventListener("mouseup", onMouseUp);
-  };
+  }; */
 
   /* 모달창 버튼 */
   const [currentTab02, setCurrentTab02] = useState("showAll01");
@@ -106,40 +105,22 @@ export default function Payment() {
       </Link>
       <div className="paymentStickyWrap">
         <div className="button-container">
-          <button
-            onClick={() => handleButtonClick("scrollTap01", "section1")}
-            className={`scroll-button ${currentTab === "scrollTap01" ? "active" : ""}`}
-          >
+          <button onClick={() => handleButtonClick("scrollTap01", "section1")} className={`scroll-button ${currentTab === "scrollTap01" ? "active" : ""}`}>
             인기
           </button>
-          <button
-            onClick={() => handleButtonClick("scrollTap02", "section2")}
-            className={`scroll-button ${currentTab === "scrollTap02" ? "active" : ""}`}
-          >
+          <button onClick={() => handleButtonClick("scrollTap02", "section2")} className={`scroll-button ${currentTab === "scrollTap02" ? "active" : ""}`}>
             납부
           </button>
-          <button
-            onClick={() => handleButtonClick("scrollTap03", "section3")}
-            className={`scroll-button ${currentTab === "scrollTap03" ? "active" : ""}`}
-          >
+          <button onClick={() => handleButtonClick("scrollTap03", "section3")} className={`scroll-button ${currentTab === "scrollTap03" ? "active" : ""}`}>
             구독
           </button>
-          <button
-            onClick={() => handleButtonClick("scrollTap04", "section4")}
-            className={`scroll-button ${currentTab === "scrollTap04" ? "active" : ""}`}
-          >
+          <button onClick={() => handleButtonClick("scrollTap04", "section4")} className={`scroll-button ${currentTab === "scrollTap04" ? "active" : ""}`}>
             알림
           </button>
-          <button
-            onClick={() => handleButtonClick("scrollTap05", "section5")}
-            className={`scroll-button ${currentTab === "scrollTap05" ? "active" : ""}`}
-          >
+          <button onClick={() => handleButtonClick("scrollTap05", "section5")} className={`scroll-button ${currentTab === "scrollTap05" ? "active" : ""}`}>
             보험
           </button>
-          <button
-            onClick={() => handleButtonClick("scrollTap06", "section6")}
-            className={`scroll-button ${currentTab === "scrollTap06" ? "active" : ""}`}
-          >
+          <button onClick={() => handleButtonClick("scrollTap06", "section6")} className={`scroll-button ${currentTab === "scrollTap06" ? "active" : ""}`}>
             약정
           </button>
         </div>
@@ -341,52 +322,28 @@ export default function Payment() {
                         </div>
                         <div>
                           <div className="showAllButton">
-                            <button
-                              onClick={() => handleButtonClick02("showAll01")}
-                              className={currentTab02 === "showAll01" ? "active" : ""}
-                            >
+                            <button onClick={() => handleButtonClick02("showAll01")} className={currentTab02 === "showAll01" ? "active" : ""}>
                               All
                             </button>
-                            <button
-                              onClick={() => handleButtonClick02("showAll02")}
-                              className={currentTab02 === "showAll02" ? "active" : ""}
-                            >
+                            <button onClick={() => handleButtonClick02("showAll02")} className={currentTab02 === "showAll02" ? "active" : ""}>
                               VOD/음원
                             </button>
-                            <button
-                              onClick={() => handleButtonClick02("showAll03")}
-                              className={currentTab02 === "showAll03" ? "active" : ""}
-                            >
+                            <button onClick={() => handleButtonClick02("showAll03")} className={currentTab02 === "showAll03" ? "active" : ""}>
                               정기배송
                             </button>
-                            <button
-                              onClick={() => handleButtonClick02("showAll04")}
-                              className={currentTab02 === "showAll04" ? "active" : ""}
-                            >
+                            <button onClick={() => handleButtonClick02("showAll04")} className={currentTab02 === "showAll04" ? "active" : ""}>
                               렌탈
                             </button>
-                            <button
-                              onClick={() => handleButtonClick02("showAll05")}
-                              className={currentTab02 === "showAll05" ? "active" : ""}
-                            >
+                            <button onClick={() => handleButtonClick02("showAll05")} className={currentTab02 === "showAll05" ? "active" : ""}>
                               교육/학습지
                             </button>
-                            <button
-                              onClick={() => handleButtonClick02("showAll06")}
-                              className={currentTab02 === "showAll06" ? "active" : ""}
-                            >
+                            <button onClick={() => handleButtonClick02("showAll06")} className={currentTab02 === "showAll06" ? "active" : ""}>
                               문화/컬처
                             </button>
-                            <button
-                              onClick={() => handleButtonClick02("showAll07")}
-                              className={currentTab02 === "showAll07" ? "active" : ""}
-                            >
+                            <button onClick={() => handleButtonClick02("showAll07")} className={currentTab02 === "showAll07" ? "active" : ""}>
                               케어/멤버십
                             </button>
-                            <button
-                              onClick={() => handleButtonClick02("showAll08")}
-                              className={currentTab02 === "showAll08" ? "active" : ""}
-                            >
+                            <button onClick={() => handleButtonClick02("showAll08")} className={currentTab02 === "showAll08" ? "active" : ""}>
                               식음료
                             </button>
                           </div>

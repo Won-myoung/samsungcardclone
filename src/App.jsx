@@ -8,12 +8,19 @@ import Benefit from "./Benefit";
 import Guide from "./Guide";
 import Finance from "./Finance";
 import Payment from "./Payment";
+import { useState } from "react";
 // import "./reset.css";
 
 function App() {
+  const [isHideMenuOpen, setIsHideMenuOpen] = useState(false);
+
+  const toggleHidemenu = () => {
+    setIsHideMenuOpen(!isHideMenuOpen);
+  };
   return (
     <div className="App">
       <BrowserRouter>
+        {/* <Header toggleHideMenu={toggleHideMenu} /> */}
         <Header />
         <Routes>
           <Route path="/" element={<Mainpage />} />
